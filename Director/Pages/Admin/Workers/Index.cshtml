@@ -1,0 +1,57 @@
+﻿@page
+@model Director.Pages.Admin.Workers.IndexModel
+@{
+}
+
+<div class="container p-3">
+	<div class="row pt-4">
+		<div class="col-6">
+			<h2 class="text-primary">Список сотрудников</h2>
+		</div>
+		<div class="col-6 text-end">
+			<a asp-page="Create" class="btn btn-success" style="border-radius:20px;"><i class="bi bi-journal-plus" ></i>&nbsp; Добавить нового сотрудника</a>
+		</div>
+	</div>
+
+	<br /><br />
+
+	<table class="table table-bordered table-striped" style="width:100%">
+
+		<thead>
+			<tr>
+				<th>
+					Имя
+				</th>
+				<th>
+					Фамилмя
+				</th>
+				<th>
+					Никнейм
+				</th>
+				<th>
+					Должность
+				</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model.Workers)
+			{
+				<tr>
+
+					<td width="15%">@item.FirstName</td>
+					<td width="20%">@item.LastName</td>
+					<td width="20%">@item.UserName</td>
+					<td >@item.Role</td>
+					<td width="20%">
+						<a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-primary " style="border-radius: 20px;"><i class="bi bi-pencil-square"></i>&nbsp;Изменить</a>
+						<a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-danger" style="border-radius: 20px;"><i class="bi bi-trash3-fill"></i>&nbsp;Удалить</a>
+
+					</td>
+				</tr>
+			}
+
+		</tbody>
+	</table>
+
+</div>

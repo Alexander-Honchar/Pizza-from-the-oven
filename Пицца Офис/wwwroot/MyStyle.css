@@ -1,0 +1,43 @@
+﻿
+
+.color-header{
+    background:#2b2929
+}
+
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /*grid-gap: 30px;
+    width: 80%;*/
+}
+
+/*.container-table {
+    display: grid;
+    justify-content: space-between;
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+}*/
+
+.my-font-header {
+    font-size: 16px;
+    color: #a3f0f8ff;
+    text-decoration: none;
+}
+
+.pizza{
+    width:250px;
+}
+
+/*.tables {
+    display: flex;
+    justify-items:center;
+    align-content:center;
+}*/
+
+
+
+
+.baggra {
+    background-image: url(https://png.icons8.com/windows/50/0063B1/edit);
+}

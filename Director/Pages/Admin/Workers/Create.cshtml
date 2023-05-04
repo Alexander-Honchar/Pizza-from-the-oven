@@ -1,0 +1,70 @@
+﻿@page
+@model Director.Pages.Admin.Workers.CreateModel
+@{
+}
+
+
+
+<form method="post">
+    <div class=" border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Добавить сотрудника</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="modelregistration.UserName"></label>
+            <input asp-for="modelregistration.UserName" class=" form-control" />
+            <span class="text-danger" asp-validation-for="modelregistration.UserName"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="modelregistration.FirstName"></label>
+            <input asp-for="modelregistration.FirstName" class=" form-control" />
+            <span class="text-danger" asp-validation-for="modelregistration.FirstName"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="modelregistration.LastName"></label>
+            <input asp-for="modelregistration.LastName" class=" form-control" />
+            <span class="text-danger" asp-validation-for="modelregistration.LastName"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="modelregistration.Password"></label>
+            <input asp-for="modelregistration.Password" class=" form-control" />
+            <span class="text-danger" asp-validation-for="modelregistration.Password"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="modelregistration.ConfirmPassword"></label>
+            <input asp-for="modelregistration.ConfirmPassword" class=" form-control" />
+            <span class="text-danger" asp-validation-for="modelregistration.ConfirmPassword"></span>
+        </div>
+
+        @if (Model.modelregistration.RoleList != null)
+        {
+            <div class="mb-3 col-6">
+                <label asp-for="modelregistration.RoleId"></label>
+                <input type="submit" asp-for="modelregistration.RoleId" hidden class=" form-control" />
+                <select asp-for="modelregistration.RoleId" asp-items="@Model.modelregistration.RoleList" class="form-select">
+                    <option disabled selected>--Выбрать  должность  сотрудника--</option>
+                </select>
+                <span asp-validation-for="modelregistration.RoleId" class="text-danger"></span>
+            </div>
+        }
+        
+        
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="width:150px;">Добавить</button>
+            <a asp-page="Index" class="btn btn-dark" style="width:150px;">Назад</a>
+        </div>
+    </div>
+
+</form>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}

@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Пицца_Сайт</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\images\menuItem\pizza\4 мяса.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\images\menuItem\pizza\4 сыра.jpg" />
+    <_ContentIncludedByDefault Remove="wwwroot\images\menuItem\pizza\Барбекю.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="logging\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Shared\Components\Cart\Default.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LocalStorage" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\images\menuItem\pizza\Барбекю.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\images\menuItem\pizza\Вегетарианская.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\images\menuItem\pizza\Королевская.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\images\menuItem\pizza\Маргарита.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\images\menuItem\pizza\Неделька.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\images\menuItem\pizza\Охотничья.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\images\menuItem\pizza\Пицца Баварская.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\images\menuItem\pizza\Пицца Сырная курочка.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\images\menuItem\pizza\Пицца Фуджи.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

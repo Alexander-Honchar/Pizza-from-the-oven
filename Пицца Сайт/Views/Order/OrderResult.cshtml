@@ -1,0 +1,25 @@
+﻿@model Пицца_Сайт.Models.StatusOrder
+
+
+<div style="height:50px">
+</div>
+<div class="text-center">
+    @if (Model.IsStatus)
+    {
+        <h3>Уважаемы, @Model.Name ваш заказ№ @Model.NumberOrder принят.</h3>
+    }
+    else
+    {
+          <h3>Ошибка. К сожалению ваш заказ не принят.</h3> 
+         <p>Позвоните нам, и закажите у менеджера</p> 
+    }
+    
+</div>
+<div class="container">
+    <div class=" row">
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>

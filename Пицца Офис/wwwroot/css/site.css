@@ -1,0 +1,32 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+
+
+
+.tr:nth-child(even) {
+    background-color: #e5dfdf;
+    color: #072aa0;
+}
+.tr:nth-child(odd) {
+    background-color:#938888b1;
+    color:black;
+    
+}

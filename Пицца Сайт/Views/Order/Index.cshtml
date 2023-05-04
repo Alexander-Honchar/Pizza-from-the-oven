@@ -1,0 +1,204 @@
+﻿@model Пицца_Сайт.Models.ViewModels.OrderViewModels
+
+
+<div class="row text-center">
+    <h2>Ваш заказ № @Model.OrderHeader.NumberOrder</h2>
+</div>
+<div class="container">
+    <div class="row">
+
+
+
+        <div class=" col" style="margin-top: 30px;">
+            <form class="contact-3" method="post" asp-action="Index">
+                <div class="row pb-2">
+                <h2 class="pl-3" style="color:chocolate">Контактные данные</h2>
+                    <hr />
+                </div>
+                <div class="container">
+                    <div class=" row">
+                        <div class="col">
+                        <div >
+                            <label asp-for="@Model.OrderHeader.FirstName"></label>
+                            <input asp-for="@Model.OrderHeader.FirstName" class=" form-control" />
+                            <span class="text-danger" asp-validation-for="@Model.OrderHeader.FirstName"></span>
+                        </div>
+                        </div>
+                        <div class="col">
+                        <div >
+                            <label asp-for="@Model.OrderHeader.LastName"></label>
+                            <input asp-for="@Model.OrderHeader.LastName" class=" form-control" />
+                            <span class="text-danger" asp-validation-for="@Model.OrderHeader.LastName"></span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class=" row">
+                        <div class="col">
+                            <div>
+                                <label asp-for="@Model.OrderHeader.PhoneNumber"></label>
+                                <input asp-for="@Model.OrderHeader.PhoneNumber" class=" form-control" />
+                                <span class="text-danger" asp-validation-for="@Model.OrderHeader.PhoneNumber"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <label asp-for="@Model.OrderHeader.Email"></label>
+                                <input asp-for="@Model.OrderHeader.Email" class=" form-control" />
+                                <span class="text-danger" asp-validation-for="@Model.OrderHeader.Email"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="height:80px">
+                </div>
+
+                <div class="row pb-2">
+                <h2 class=" pl-3" style="color:chocolate">Адрес доставки</h2>
+                    <hr />
+                </div>
+
+                <div class="container">
+                    <div class=" row">
+                        <div class="col-8">
+                            <label asp-for="@Model.OrderHeader.Street"></label>
+                            <input asp-for="@Model.OrderHeader.Street" class=" form-control" />
+                            <span class="text-danger" asp-validation-for="@Model.OrderHeader.Street"></span>
+                        </div>
+                        <div class="col-4">
+                            <label asp-for="@Model.OrderHeader.House"></label>
+                            <input asp-for="@Model.OrderHeader.House" class=" form-control" />
+                            <span class="text-danger" asp-validation-for="@Model.OrderHeader.House"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class=" row">
+                        <div class="col">
+                            <label asp-for="@Model.OrderHeader.Entrance"></label>
+                            <input asp-for="@Model.OrderHeader.Entrance" class=" form-control" />
+                            <span class="text-danger" asp-validation-for="@Model.OrderHeader.Entrance"></span>
+                        </div>
+                        <div class="col">
+                            <label asp-for="@Model.OrderHeader.Apartment"></label>
+                            <input asp-for="@Model.OrderHeader.Apartment" class=" form-control" />
+                            <span class="text-danger" asp-validation-for="@Model.OrderHeader.Apartment"></span>
+                        </div>
+                        <div class="col">
+                            <label asp-for="@Model.OrderHeader.Floor"></label>
+                            <input asp-for="@Model.OrderHeader.Floor" class=" form-control" />
+                            <span class="text-danger" asp-validation-for="@Model.OrderHeader.Floor"></span>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div >
+                    <label asp-for="@Model.OrderHeader.WishesClient">Ваши пожелания</label>
+                    <textarea asp-for="@Model.OrderHeader.WishesClient" rows="3" class="form-control"></textarea>
+                    <span asp-validation-for="@Model.OrderHeader.WishesClient" class="text-danger"></span>
+                </div>
+
+                <div style="height:50px">
+                </div>
+
+                <div class="container">
+                    <div class=" row">
+                        <div class="col text-center">
+                                <button type="submit" class="btn btn-primary" style="width:250px; border-radius: 20px; opacity:0.7;">Заказать</button>
+                        </div>
+                    <div class="col text-center">
+                            <a asp-action="Index" asp-controller="Home" class="btn btn-dark" style="width:250px; border-radius: 20px; opacity:0.7; color:forestgreen">Продолжить покупки</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+        <div class="col" style="margin-top: 30px;">
+            <div style="height:10px">
+            </div>
+            <div>
+                <h4>Блюда в Вашем заказе</h4>
+            </div>
+            <div>
+                <table class="table table-bordered table-striped text-break" style="width:100%">
+                    <thead>
+                        <tr class="text-center">
+                            <th>Блюдо</th>
+                            <th>Кол-во</th>
+                            <th>Цена</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    @if (Model.OrderDetailsList != null)
+                    {
+                        <tbody>
+
+                            @foreach (var item in Model.OrderDetailsList)
+                            {
+
+                                <tr class="text-center" style="vertical-align: text-top">
+                                    <td >@item.MenuName</td>
+                                    <td width="15%">@item.Count</td>
+                                    <td width="15%">@(item.Price * item.Count)</td>
+                                    <td width="15%" class="text-center" btn-group" role="group">
+
+
+                                        <a asp-controller="Order" asp-action="Remove" asp-route-id="@item.MenuId" class="btn btn-outline-danger">
+
+                                            <i class="bi bi-trash-fill"></i>
+                                        </a>
+
+                                    </td>
+                                </tr>
+
+                            }
+                        </tbody>
+                    }
+
+                </table>
+            </div>
+            <div class="col text-end">
+                <h5>К оплате @Model.TotalSumma грн</h5>
+            </div>
+            <div style="height:50px">
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164152.87938375474!2d36.12101667870166!3d49.99469535695867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09f63ab0f8b%3A0x2d4c18681aa4be0a!2z0KXQsNGA0YzQutC-0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sua!4v1681327818081!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}
+
+<div class="container">
+    <div class=" row">
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>

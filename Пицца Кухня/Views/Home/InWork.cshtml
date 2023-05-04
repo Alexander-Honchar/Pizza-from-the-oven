@@ -1,0 +1,195 @@
+﻿@model Пицца_Кухня.Models.AjaxViewModels.ViewModelForOrder
+@using Пицца_Кухня.Utility
+
+
+<div class="container" style=" height:100px">
+
+</div>
+
+
+
+@*<div class="container justify-content-evenly">
+    <div class=" row text-center">
+        <div class="col-10">
+            <div class="card p-2 " style="border:2px solid #808080; border-radius: 10px;">
+                <div class=" card-header  text-light" style="background-color:#222222;height:150px">
+                    <div class=" row">
+                        <h3>Наряд-Заказ № @Model.NumberOrder</h3>
+                        <hr />
+                    </div>
+                    <div class=" row text-center">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-10">
+                                    <h5>Название</h5>
+                                </div>
+                                <div class="col-2">
+                                    <h5>шт.</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-4">
+                            <h5>Время</h5>
+                        </div>
+                        <div class="col-2">
+                            <h5>Статус</h5>
+                        </div>
+                        <hr />
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class=" row text-center">
+                        <div class="col-4">
+                            @foreach (var Menu in @Model.MenuList)
+                            {
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h4>@Menu.MenuName</h4>
+                                        <br />
+                                    </div>
+                                    <div class="col-4">
+                                        <h4>@Menu.Count</h4>
+                                        <br />
+                                    </div>
+                                </div>
+
+                            }
+
+                        </div>
+                        <div class="col-4">
+
+                            <textarea asp-for="@Model.WishesClient" readonly class="rounded border form-control" rows="3"></textarea>
+                            
+
+                        </div>
+                        <div class="col-2">
+                            <h4>@Model.DateCreatedOrder</h4>
+                        </div>
+                        <div class="col-2">
+                            <h4 id="@Model.Id" class="statusOrder">@Model.OrderStatus</h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class=" card-footer">
+                    <div class="row text-center">
+                        <div>
+                            <a id="@Model.Id" name="buttonOrder" asp-area="" asp-controller="Home" asp-action="InWork" asp-route-id="@Model.Id" class="btn btn-primary " style="width:120px;border-radius: 20px;">Взять в работу</a>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>*@
+
+
+
+
+<div class="container">
+    <div id="@Model.Id" class="card p-2 " style="border:2px solid #808080; border-radius: 10px;">
+        <div class="row text-center">
+            <div class="col-10">
+                <div class="card p-2 " style="border:2px solid #808080; border-radius: 10px;">
+                    <div class=" card-header  text-light" style="background-color:#222222;height:150px">
+                        <div class=" row">
+                            <h3>Наряд-Заказ № <span style="color:burlywood">@Model.NumberOrder</span></h3>
+                            <hr />
+                        </div>
+                        <div class=" row text-center">
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <h5>Название</h5>
+                                    </div>
+                                    <div class="col-2 text-start">
+                                        <h5>шт.</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <h5>Пожелания</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5>Время</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5>Статус</h5>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class=" row text-center">
+                            <div class="col-4">
+                                @foreach (var Menu in @Model.MenuList)
+                                {
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h4>@Menu.MenuName</h4>
+                                            <br />
+                                        </div>
+                                        <div class="col-4 text-end">
+                                            <h4>@Menu.Count</h4>
+                                            <br />
+                                        </div>
+                                    </div>
+
+                                }
+
+                            </div>
+                            <div class="col-4">
+
+                                <textarea asp-for="@Model.WishesClient" readonly class="rounded border form-control" rows="3"></textarea>
+
+
+                            </div>
+                            <div class="col-2">
+                                <h4>@Model.DateCreatedOrder</h4>
+                            </div>
+                            <div class="col-2">
+                                <h4 id="@Model.Id" class="statusOrder">@Model.OrderStatus</h4>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class=" card-footer">
+                        <hr />
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-2 ">
+                <div class="row" style="height:15%">
+                </div>
+                <div class="row gy-5 justify-content-center ">
+                    <a id="@Model.Id" name="@StaticDetails.StatusInWork" class="btn btn-primary StatusInWork" style="width:120px;border-radius: 20px;display:block">Начать готовить</a>
+                    <a id="@Model.Id" name="@StaticDetails.StatusReady" class="btn btn-primary" style="width:120px;border-radius: 20px;">Готово</a>
+                    <a id="@Model.Id"  asp-area="" asp-controller="Home" asp-action="Index"  class="btn btn-primary " style="width:120px;border-radius: 20px;">Назад</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
+  
+    
+</div>
+
+<div class="container" style=" height:100px">
+</div>
+
+
+@section Scripts{
+    @{
+        <script src="~/js/InWork.js"></script>
+    }
+}

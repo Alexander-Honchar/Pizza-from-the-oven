@@ -1,0 +1,198 @@
+﻿@model Пицца_Офис.Models.ViewModels.OrderViewModels
+@using Пицца_Офис.Utillity
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<form method="post" asp-action="Edit">
+    <input asp-for="@Model.OrderHeader.Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Обновить Заказ  № <span style="color:brown">@Model.OrderHeader.NumberOrder</span>  </h2>
+            <hr />
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label asp-for="@Model.OrderHeader.FirstName"></label>
+                        <input asp-for="@Model.OrderHeader.FirstName" class=" form-control" />
+                        <span class="text-danger" asp-validation-for="@Model.OrderHeader.FirstName"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.OrderHeader.PhoneNumber"></label>
+                        <input asp-for="@Model.OrderHeader.PhoneNumber" class=" form-control" />
+                        <span class="text-danger" asp-validation-for="@Model.OrderHeader.PhoneNumber"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label asp-for="@Model.OrderHeader.LastName"></label>
+                        <input asp-for="@Model.OrderHeader.LastName" class=" form-control" />
+                        <span class="text-danger" asp-validation-for="@Model.OrderHeader.LastName"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label asp-for="@Model.OrderHeader.Street"></label>
+                        <input asp-for="@Model.OrderHeader.Street" class=" form-control" />
+                        <span class="text-danger" asp-validation-for="@Model.OrderHeader.Street"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.OrderHeader.Entrance"></label>
+                        <input asp-for="@Model.OrderHeader.Entrance" class=" form-control" />
+                        <span class="text-danger" asp-validation-for="@Model.OrderHeader.Entrance"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.OrderHeader.Apartment"></label>
+                        <input asp-for="@Model.OrderHeader.Apartment" class=" form-control" />
+                        <span class="text-danger" asp-validation-for="@Model.OrderHeader.Apartment"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.OrderHeader.WishesClient"></label>
+                        <textarea asp-for="@Model.OrderHeader.WishesClient" class="form-control"></textarea>
+                        <span class="text-danger" asp-validation-for="@Model.OrderHeader.WishesClient"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mb-3">
+                        <label asp-for="@Model.OrderHeader.House"></label>
+                        <input asp-for="@Model.OrderHeader.House" class=" form-control" />
+                        <span class="text-danger" asp-validation-for="@Model.OrderHeader.House"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="@Model.OrderHeader.Floor"></label>
+                        <input asp-for="@Model.OrderHeader.Floor" class=" form-control" />
+                        <span class="text-danger" asp-validation-for="@Model.OrderHeader.Floor"></span>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="container">
+                            <div class=" card">
+                                <table class="table table-bordered table-striped text-break" style="width:100%; ">
+                                    <thead>
+                                        <tr class="text-center" style=" background-color:burlywood;color:black;">
+                                            <th>Название</th>
+                                            <th>Блюдо</th>
+                                            <th>шт.</th>
+                                            @*<th>Категория Пиццы</th>*@
+                                            <th></th>
+                                            @*<th></th>*@
+                                        </tr>
+                                    </thead>
+                                    @if (Model != null)
+                                    {
+                                        <tbody>
+
+                                            @foreach (var item in Model.OrderDetailsList)
+                                            {
+
+                                                <tr class="text-center">
+                                                    <td id="@item.Id" class="NameCategory" width="20%">&nbsp;&nbsp;@item.NameCategory</td>
+                                                    <td id="@item.Id" class="MenuName" > @item.MenuName</td>
+                                                    <td id="@item.Id" class="count" width="10%">&nbsp;&nbsp;@item.Count</td>
+                                                    @*<td width="20%">&nbsp;&nbsp;@item.CategoryPizza.Name</td>*@
+                                                    <td width="20%">
+                                                        <div class="col btn-group text-end" role="group">
+                                                            @if (Model.OrderHeader.OrderStatus == StaticDetails.StatusInWork ||
+                                                                  Model.OrderHeader.OrderStatus == StaticDetails.StatusReady ||
+                                                                  Model.OrderHeader.OrderStatus == StaticDetails.StatusSent)
+                                                            {
+                                                                <div class="col">
+                                                                    <a id="@item.Id" name="plus"  class="btn disabled" style="color:forestgreen;border-radius: 50%;padding: 6px 10px; border:1px;"><i class="bi bi-plus-square"></i></a>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <a id="@item.Id" name="minus" class="btn disabled" style="color:crimson;border-radius: 50%;padding: 6px 10px;"><i class="bi bi-dash-square"></i></a>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <a id="@item.Id" name="trash" class="btn disabled" style="color: red;border-radius: 50%;padding: 6px 10px;"><i class="bi bi-trash3-fill"></i></a>
+                                                                </div>
+                                                            }
+                                                            @if (Model.OrderHeader.OrderStatus == null ||
+                                                                 Model.OrderHeader.OrderStatus == StaticDetails.StatusAccepted)
+                                                            {
+                                                                <div class="col">
+                                                                    <a id="@item.Id" name="plus" class="btn " style="color:forestgreen;border-radius: 50%;padding: 6px 10px; border:1px;"><i class="bi bi-plus-square"></i></a>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <a id="@item.Id" name="minus" class="btn" style="color:crimson;border-radius: 50%;padding: 6px 10px;"><i class="bi bi-dash-square"></i></a>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <a id="@item.Id" name="trash" class="btn " style="color: red;border-radius: 50%;padding: 6px 10px;"><i class="bi bi-trash3-fill"></i></a>
+                                                                </div>
+                                                            }
+                                                            
+
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                            }
+                                        </tbody>
+                                    }
+
+
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    
+                </div>
+
+
+
+                
+
+
+
+
+            </div>
+        </div>
+       
+        
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="width:150px;">Обновить</button>
+            <a asp-action="Index" class="btn btn-dark" style="width:150px;">Назад</a>
+        </div>
+    </div>
+
+</form>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+    @{
+        <script src="~/js/countForCart.js"></script>
+    }
+
+}
+
+
+
+
+

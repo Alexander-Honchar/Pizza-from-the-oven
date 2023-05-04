@@ -1,0 +1,46 @@
+﻿@model Пицца_Офис.Models.ViewModels.MenuItemDTOViewModel
+
+<form asp-action="Delete" style="width:70%">
+    <input asp-for="MenuItem.Id" hidden />
+    <input asp-for="MenuItem.ImagePatch" hidden />
+    <input asp-for="MenuItem.Name" hidden />
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-primary">Удалить ?</h1>
+        <hr />
+
+        <div class="row">
+
+            <div class="col-10 pb-3">
+                <label asp-for="MenuItem.Name" class="control-label pt-2" style="font-size:20px;">Название Пиццы</label>
+                <input asp-for="MenuItem.Name" disabled class="form-control" />
+            </div>
+            <div class="col-10 pb-3">
+                <label asp-for="MenuItem.Price" class="control-label pt-2" style="font-size:20px;">Название Пиццы</label>
+                <input asp-for="MenuItem.Price" disabled class="form-control" />
+            </div>
+            <div class="col-10 pb-3">
+                <label asp-for="MenuItem.Description" class="control-label pt-2" style="font-size:20px;">Название Пиццы</label>
+                <input asp-for="MenuItem.Description" disabled class="form-control" />
+            </div>
+            
+
+            @*<div class="mb-3 col-8">
+                <label asp-for="MenuItem.PizzaMenuItemId"></label>
+                <select asp-for="MenuItem.PizzaMenuItemId" asp-items="@Model.PizzaList" disabled class="form-select">
+                </select>
+                <span asp-validation-for="MenuItem.PizzaMenuItemId" class="text-danger"></span>
+            </div>*@
+            
+            <div class="row col-8">
+                <div class="col-5">
+                    <a asp-action="Index" asp-controller="MenuItem" class="btn-primary btn form-control ">Назад</a>
+                </div>
+                <div class="col-5">
+                    <input type="submit" value="Удалить" class="btn btn-danger form-control" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>

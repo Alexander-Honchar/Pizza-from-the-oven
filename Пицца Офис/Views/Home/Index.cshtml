@@ -1,0 +1,133 @@
+﻿@*@using Пицца_Офис.Utillity;
+@model IEnumerable<Пицца_Офис.Models.ViewModels.OrderViewModels>
+
+
+
+
+
+<div class="container p-3 ">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Заказы</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Pamyatniks" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> &nbsp; Добавить памятник
+            </a>
+        </div>
+    </div>
+    <br /><br />
+
+    <table class="table table-bordered table-striped text-break" style="width:110%">
+        <thead>
+            <tr class="text-center">
+                <th></th>
+                <th>Номер Заказа</th>
+                <th>Принят</th>
+                <th>Клиент</th>
+                <th>Телефон</th>
+                <th>Адрес</th>
+                <th> Заказ</th>
+                
+                <th> Статус</th>
+                <th>
+                    
+                    </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model!=null)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr class="text-center">
+                        <td width="5%">
+                            @if (item.OrderHeader.OrderStatus ==StaticDetails.StatusSent)
+                            {
+                                <i class="bi bi-check-lg" style="color:green;border-radius: 50%;padding: 6px 10px; border:1px;"></i>
+                            }
+                            </td>
+                        <td width="5%">@item.OrderHeader.NumberOrder</td>
+                        <td width="7%">@item.DateCreatedOrder</td>
+                        <td width="10%">@item.OrderHeader.FirstName&nbsp;@item.OrderHeader.LastName</td>
+
+                        <td width="10%">@item.OrderHeader.PhoneNumber</td>
+                        <td width="10%">
+                            @item.OrderHeader.Street&nbsp;
+                            дом.@item.OrderHeader.House&nbsp;
+                            под.@item.OrderHeader.Entrance&nbsp;
+                            эт.@item.OrderHeader.Floor&nbsp;
+                            кв.@item.OrderHeader.Apartment&nbsp;
+                        </td>
+                        <td width="15%">
+                            @foreach (var Details in item.OrderDetailsList)
+                            {
+                                <p>@Details.MenuName</p>
+                            }
+                        </td>
+                        
+                        
+                        <td width="5%">
+                            @if (@item.OrderHeader.OrderStatus==null)
+                                {
+                                    <i class="bi bi-bookmark-plus-fill" style="color:goldenrod;border-radius: 50%;padding: 6px 10px; border:1px;"></i>
+                                }
+
+                        </td> 
+
+                        <td width="10%">
+                            <div class="col btn-group text-end" role="group">
+                                    @if (item.OrderHeader.OrderStatus ==null)
+                                    {
+                                        <div class="col">
+                                            <a asp-controller="Home"  class="btn " style="color:forestgreen;border-radius: 50%;padding: 6px 10px; border:1px;"><i class="bi bi-bookmark-plus-fill"></i></a>
+                                        </div>
+                                    }
+                                    @if (item.OrderHeader.OrderStatus ==StaticDetails.StatusReady)
+                                    {
+                                        <div class="col">
+                                            <a asp-controller="Home" class="btn " style="color:darkgreen;border-radius: 50%;padding: 6px 10px; border:1px;"><i class="bi bi-car-front-fill"></i></a>
+                                        </div>
+                                    }
+                                    
+                                     
+                                    <div class="col">
+                                        <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.OrderHeader.Id"  class="btn" style="color:royalblue;border-radius: 50%;padding: 6px 10px;"><i class="bi bi-pencil-square"></i></a>
+                                    </div>
+                                    <div class="col">
+                                        <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.OrderHeader.Id"  class="btn " style="color:red;border-radius: 50%;padding: 6px 10px;"><i class="bi bi-trash3-fill"></i></a>
+                                    </div>
+                             </div>
+                            
+
+                        </td>
+                    </tr>
+                }
+            }
+            
+        </tbody>
+
+    </table>
+</div>
+*@
+
+
+
+
+
+
+
+<div id="mytable"></div>
+
+    
+
+@section Scripts{
+    @{
+        <script src="~/js/table.js" >  </script>
+    }
+}
+
+
+
+
+

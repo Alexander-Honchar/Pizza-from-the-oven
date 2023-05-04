@@ -1,0 +1,53 @@
+﻿@page
+@model Director.Pages.Admin.Workers.EditModel
+@{
+}
+
+
+
+<form method="post" >
+    <input asp-for="Worker.Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Обновить данные сотрудника</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Worker.UserName"></label>
+            <input asp-for="Worker.UserName" class=" form-control" />
+            <span class="text-danger" asp-validation-for="Worker.UserName"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Worker.FirstName"></label>
+            <input asp-for="Worker.FirstName" class=" form-control" />
+            <span class="text-danger" asp-validation-for="Worker.FirstName"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Worker.LastName"></label>
+            <input asp-for="Worker.LastName" class=" form-control" />
+            <span class="text-danger" asp-validation-for="Worker.LastName"></span>
+        </div>
+
+        <div class="mb-3 col-6">
+            <label asp-for="Worker.RoleId"></label>
+            <select asp-for="Worker.RoleId" asp-items="@Model.Worker.RoleList" class="form-select">
+                <option disabled selected>--Выбрать Размер--</option>
+            </select>
+            <span asp-validation-for="Worker.RoleId" class="text-danger"></span>
+        </div>
+       
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="width:150px;">Обновить</button>
+            <a asp-page="Index" class="btn btn-dark" style="width:150px;">Назад</a>
+        </div>
+    </div>
+
+</form>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}

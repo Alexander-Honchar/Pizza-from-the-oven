@@ -1,0 +1,54 @@
+﻿@model Пицца_Офис.Models.ViewModels.PizzaDTOViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<form method="post" asp-action="Create">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Добавить Пиццу</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="PizzaDTO.Name"></label>
+            <input asp-for="PizzaDTO.Name" class=" form-control" />
+            <span class="text-danger" asp-validation-for="PizzaDTO.Name"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="PizzaDTO.Price"></label>
+            <input asp-for="PizzaDTO.Price" class=" form-control" />
+            <span class="text-danger" asp-validation-for="PizzaDTO.Price"></span>
+        </div>
+
+        <div class="mb-3 col-6">
+            <label asp-for="PizzaDTO.SizePizzaId"></label>
+            <select asp-for="PizzaDTO.SizePizzaId" asp-items="@Model.SizeSelectList" class="form-select">
+                <option disabled selected>--Выбрать Размер--</option>
+            </select>
+            <span asp-validation-for="PizzaDTO.SizePizzaId" class="text-danger"></span>
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="PizzaDTO.CategoryPizzaId"></label>
+            <select asp-for="PizzaDTO.CategoryPizzaId" asp-items="@Model.CategorySelectList" class="form-select">
+                <option disabled selected>--Выбрать Категорию--</option>
+            </select>
+            <span asp-validation-for="PizzaDTO.CategoryPizzaId" class="text-danger"></span>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="width:150px;">Добавить</button>
+            <a asp-action="Index" class="btn btn-dark" style="width:150px;">Назад</a>
+        </div>
+    </div>
+
+</form>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}

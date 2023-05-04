@@ -1,0 +1,144 @@
+﻿
+@inject IHttpContextAccessor httContext
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Сайт</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Пицца_Сайт.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyStyle.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" crossorigin="anonymous" />
+</head>
+<body>
+    <header>
+        <div class="color-header">
+            <div class="col-md-6">
+                <div class="row justify-content-end">
+                   
+                </div>
+
+            </div>
+            <hr />
+        </div>
+
+        <div class="row justify-content-center bg-secondary bg-opacity-10">
+            <img src="~/images/pages/pizza_fixed.png" class="pizza" />
+
+        </div>
+
+        <div class="mynavbar row justify-content-around">
+            <div class="col-md-7" style="font-size:20px">
+                <div class="row justify-content-around">
+                    <div class="col-md-2">
+                        <a class="navbar" asp-area="" asp-controller="Home" asp-action="Index">Пицца</a>
+
+                    </div>
+                    <div class="col-md-3">
+                        <a class="nav-link" asp-area="" asp-controller="KingSize" asp-action="Index">Метровая Пицца</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a class="nav-link" asp-area="" asp-controller="Sushi" asp-action="Index">Суши</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a class="nav-link" asp-area="" asp-controller="Drink" asp-action="Index">Напитки</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col text-end">
+                            <a class="my-font-header" style="font-size:25px; color:darkseagreen" asp-area="" asp-controller="Cart" asp-action="Index">
+                                Корзина
+                            </a>
+                        </div>
+                        <div class="col w-50">
+                            <a class="my-font-header" asp-area="" asp-controller="Cart" asp-action="Index">
+                                <i class="bi bi-basket2" style="color:green; font-size:25px"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="col">
+                            <a class="navbar-brand" style="color:aliceblue;  font-size:25px">@await Component.InvokeAsync("Cart")</a>
+                        </div>
+                        <div class="col-2">
+                        </div>
+
+                    </div>
+
+
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="row" style="height:10px">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row justify-content-center ">
+                    <div class="col-md-4">
+                        <i class="bi bi-telephone" style="color:darkgoldenrod;font-size:20px">(+38) 093 99 99 </i>
+                    </div>
+                    <div class="col-md-4">
+                            <i class=" bi bi-clock" style="color:darkgoldenrod;font-size:20px">10:00-21:00</i>
+                    </div>
+                </div>
+                </div>
+                <div class="col">
+                   <div class="row justify-content-evenly">
+                    <div class="col-md-2">
+                        <a class="my-font-header" asp-area="" asp-controller="Home" asp-action="Index">Контакты</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a class="my-font-header" asp-area="" asp-controller="Home" asp-action="Index">Скидки</a>
+                    </div>
+                   
+                </div>
+
+                </div>
+                
+
+
+            </div>
+        </div>
+
+    </header>
+    <div class="my-conteiner">
+        <div >
+            
+        </div>
+        <div class="container">
+            <main role="main" class="pb-3 style=" height:100vh">
+                @RenderBody()
+            </main>
+        </div>
+        <div >
+        </div>
+
+    </div>
+    
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Пицца Сайт - 
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+   
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

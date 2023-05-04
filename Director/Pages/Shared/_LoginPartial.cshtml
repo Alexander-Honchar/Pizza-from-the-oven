@@ -1,0 +1,45 @@
+﻿@using Director.Utillity;
+@using Microsoft.AspNetCore.Identity
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor httpContextAccessor
+
+@{
+    var name = "";
+    if (httpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
+    {
+        name = httpContextAccessor.HttpContext.User.Claims.ToList()[1].Value + " "
+                                                       + httpContextAccessor.HttpContext.User.Claims.ToList()[2].Value;
+    }
+   
+}
+
+
+<ul class="navbar-nav">
+
+    @if (httpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
+
+    {
+        <li class="nav-item text-center">
+            <h6 style="height:3px"></h6>
+            <h6 style="color:darkgreen">@name</h6>
+        </li>
+        <li class="nav-item">
+            
+            <form class="form-inline" asp-page="/Admin/Authentication/Logout">
+                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-page="/Admin/Authentication/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-page="/Admin/Authentication/Login">Login</a>
+        </li>
+                            
+    }
+
+</ul>
+
+

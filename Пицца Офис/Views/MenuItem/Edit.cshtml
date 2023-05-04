@@ -1,0 +1,64 @@
+﻿@model Пицца_Офис.Models.ViewModels.MenuItemDTOViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<form method="post" asp-action="Edit" enctype="multipart/form-data">
+    <input asp-for="MenuItem.Id" hidden />
+    <input asp-for="MenuItem.ImagePatch" hidden />
+    @*<input asp-for="MenuItem.PizzaMenuItemId" hidden />*@
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Обновить Пиццу</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="MenuItem.Name"></label>
+            <input asp-for="MenuItem.Name" class=" form-control" />
+            <span class="text-danger" asp-validation-for="MenuItem.Name"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="MenuItem.Price"></label>
+            <input asp-for="MenuItem.Price" class=" form-control" />
+            <span class="text-danger" asp-validation-for="MenuItem.Price"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="MenuItem.Description"></label>
+            <textarea asp-for="MenuItem.Description" class="form-control"></textarea>
+            <span class="text-danger" asp-validation-for="MenuItem.Description"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="MenuItem.ImagePatch"></label>
+            <input type="file" name="file" class=" form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="MenuItem.NameCategory"></label>
+            <input asp-for="MenuItem.NameCategory" class=" form-control" />
+            <span class="text-danger" asp-validation-for="MenuItem.NameCategory"></span>
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="MenuItem.CategoryMenuId"></label>
+        <select asp-for="MenuItem.CategoryMenuId" asp-items="@Model.CategoryMenuList" class="form-select">
+                <option disabled selected>--Выбрать Категорию--</option>
+            </select>
+        <span asp-validation-for="MenuItem.CategoryMenuId" class="text-danger"></span>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="width:150px;">Обновить</button>
+            <a asp-action="Index" class="btn btn-dark" style="width:150px;">Назад</a>
+        </div>
+    </div>
+
+</form>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}

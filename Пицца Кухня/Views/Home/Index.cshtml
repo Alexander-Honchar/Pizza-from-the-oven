@@ -1,0 +1,117 @@
+﻿@using Пицца_Кухня.Utility
+@model IEnumerable<Пицца_Кухня.Models.AjaxViewModels.ViewModelForIndex>
+
+<div class=" container">
+    <div id="cardOrder" class="row gy-5">
+        @if (Model!=null)
+        {
+            @*@foreach (var item in Model)
+            {
+                @if (@item.OrderStatus == StaticDetails.StatusAccepted || @item.OrderStatus == StaticDetails.StatusInWork)
+                {
+                    <div id="@item.IdOrderHeader" class="card p-2 " style="border:2px solid #808080; border-radius: 10px;">
+                        <div class=" card-header  text-light" style="background-color:#222222;height:150px">
+                            <div class=" row">
+                                <h3>Наряд-Заказ</h3>
+                                <hr />
+                            </div>
+                            <div class=" row text-center">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h5>Название</h5>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5>Кол-ство</h5>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-4">
+                                    <h5>Время</h5>
+                                </div>
+                                <div class="col-2">
+                                    <h5>Статус</h5>
+                                </div>
+                                <hr />
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class=" row text-center">
+                                <div class="col-6">
+                                    @foreach (var Menu in item.MenuList)
+                                    {
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <h4>@Menu.MenuName</h4>
+                                                <br />
+                                            </div>
+                                            <div class="col-4">
+                                                <h4>@Menu.Count</h4>
+                                                <br />
+                                            </div>
+                                        </div>
+
+                                    }
+
+                                </div>
+                                <div class="col-4">
+                                    <h4>@item.DateCreatedOrder</h4>
+                                </div>
+                                <div class="col-2">
+                                    <h4 id="@item.IdOrderHeader" class="statusOrder">@item.OrderStatus</h4>          
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class=" card-footer">
+                            <div class="row text-center">
+                                <div>
+                                    <a id="@item.IdOrderHeader" name="buttonOrder" asp-area="" asp-controller="Home" asp-action="InWork" asp-route-id="@item.IdOrderHeader" class="btn btn-primary " style="width:250px;border-radius: 20px;">Взять в работу</a>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+
+                    </div>
+                }
+
+            }*@
+        }
+       
+    </div>
+</div>
+
+
+
+<@*div class="container p-3 ">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Заказы</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a onclick="test()" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> &nbsp; Добавить памятник
+            </a>
+        </div>
+    </div>
+</div>*@
+
+
+
+
+<div class="row" style="height:250px">
+
+</div>
+
+
+
+
+
+@section Scripts{
+    @{
+        <script src="~/js/Index.js"></script>
+    }
+}

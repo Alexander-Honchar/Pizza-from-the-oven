@@ -1,0 +1,135 @@
+﻿@model Пицца_Сайт.Models.ViewModels.AllPizzaViewModels
+
+
+
+
+
+
+<form method="post" asp-action="Details" asp-controller="Home" >
+	<input asp-for="MenuItem.NameCategory" hidden />
+	<input asp-for="MenuItem.Id" hidden />
+	<input asp-for="MenuItem.Count" hidden />
+	<div class="content-details">
+
+		<div class="cols-md-4">
+			<img class="card-img-top rounded" src="@Model.MenuItem.ImagePatch" />
+		</div>
+		
+		<div class="cols-md-4 text-center">
+			<div @*class="text-center"*@ style="height:120px">
+				<h3 style="color:tomato">@Model.MenuItem.Name</h3>
+			</div>
+			<div style="height:100px">
+				<h6>@Model.MenuItem.Description</h6>
+			</div>
+			<div>
+				<div class="card p-1" style="height:100px">
+					<div class="row justify-content-evenly text-center">
+						@foreach (var pizza in Model.PizzaList)
+						{
+							@if (pizza.Name == @Model.MenuItem.Name && pizza.SizePizza.Size == "24 см")
+							{
+							<div class="col-sm-4">
+									<input type="radio" value="@pizza.Id" class="btn-check" name="options-outlined" id="@Model.MenuItem.Name-24" autocomplete="off" checked>
+									<label class="btn btn-outline-danger m-1" style="width:150px" for="@Model.MenuItem.Name-24">∅ 24&nbsp;&nbsp;&nbsp;&nbsp;@pizza.Price&nbsp;грн</label>
+								</div>
+							}
+						}
+
+
+						@foreach (var pizza in Model.PizzaList)
+						{
+							@if (pizza.Name == @Model.MenuItem.Name && pizza.SizePizza.Size == "30 см")
+							{
+								<div class="col-4">
+
+									<input type="radio" value="@pizza.Id" class="btn-check" name="options-outlined" id="@Model.MenuItem.Name-30" autocomplete="off" checked>
+									<label class="btn btn-outline-danger  m-1" style="width:150px" for="@Model.MenuItem.Name-30">∅ 30&nbsp;&nbsp;&nbsp;&nbsp;@pizza.Price&nbsp;грн</label>
+								</div>
+							}
+						}
+
+						@foreach (var pizza in Model.PizzaList)
+						{
+							@if (pizza.Name == @Model.MenuItem.Name && pizza.SizePizza.Size == "35 см")
+							{
+								<div class="col-sm-4">
+
+									<input type="radio" value="@pizza.Id" class="btn-check" name="options-outlined" id="@Model.MenuItem.Name-35" autocomplete="off" checked>
+									<label class="btn btn-outline-danger  m-1" style="width:150px" for="@Model.MenuItem.Name-35">∅ 35&nbsp;&nbsp;&nbsp;&nbsp;@pizza.Price&nbsp;грн</label>
+								</div>
+							}
+						}
+
+
+						@foreach (var pizza in Model.PizzaList)
+						{
+							@if (pizza.Name == @Model.MenuItem.Name && pizza.SizePizza.Size == "40 см")
+							{
+								<div class="col-sm-4">
+
+									<input type="radio" value="@pizza.Id" class="btn-check" name="options-outlined" id="@Model.MenuItem.Name-40" autocomplete="off" checked>
+									<label class="btn btn-outline-danger  m-1" style="width:150px" for="@Model.MenuItem.Name-40">∅ 40&nbsp;&nbsp;&nbsp;&nbsp;@pizza.Price&nbsp;грн</label>
+								</div>
+							}
+						}
+						@foreach (var pizza in Model.PizzaList)
+						{
+							@if (pizza.Name == @Model.MenuItem.Name && pizza.SizePizza.Size == "50 см")
+							{
+								<div class="col-sm-4">
+
+									<input type="radio" value="@pizza.Id" class="btn-check" name="options-outlined" id="@Model.MenuItem.Name-50" autocomplete="off" checked>
+									<label class="btn btn-outline-danger  m-1" style="width:150px" for="@Model.MenuItem.Name-50">∅ 50&nbsp;&nbsp;&nbsp;&nbsp;@pizza.Price&nbsp;грн</label>
+								</div>
+							}
+						}
+
+					</div>
+
+				</div>
+			</div>
+			<div style="height:40px">
+			</div>
+			<div class="col-12">
+				<div class="row" >
+						<h5 id="count" class="col-6">Количество&nbsp;&nbsp;@Model.MenuItem.Count шт.</h5>
+					<div class="col-3 w-25 btn-group" role="group">
+						<a id="plus" class="btn btn-outline-success">
+							
+							<i class="bi bi-plus-square"></i>
+						</a> &nbsp;&nbsp;
+						<a id="minus"  class="btn btn-outline-secondary">
+							
+							<i class="bi bi-dash-square"></i>
+						</a>&nbsp;&nbsp;
+						<div class="col-1  text-right">
+							<button type="submit" class="btn btn-outline-danger" asp-controller="Home" asp-action="RemoveDetails">
+								<i class="bi bi-trash-fill"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+			<div >
+				<div style="height:80px">
+
+				</div>
+				<button id="order" type="submit" class="btn btn-primary" asp-route-menuid="@Model.MenuItem.Id" style="width:200px;">Заказать</button>
+				
+			</div>
+
+		</div>
+
+
+	</div>
+</form>
+
+@section Scripts{
+	@{
+		<script src="~/js/count2.js"></script>
+	}
+}
+

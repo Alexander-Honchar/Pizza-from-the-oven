@@ -1,0 +1,1027 @@
+2023-05-04 07:13:54.880 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 07:13:54.975 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 07:13:54.975 +03:00 [INF] Hosting environment: Development
+2023-05-04 07:13:54.975 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 07:13:54.995 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 07:13:55.050 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:13:55.088 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 07:13:55.117 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 07:13:55.151 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 07:13:55.153 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 07:14:09.582 +03:00 [INF] Received HTTP response headers after 14425.6432ms - 200
+2023-05-04 07:14:09.584 +03:00 [INF] End processing HTTP request after 14435.8341ms - 200
+2023-05-04 07:14:09.978 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 07:14:09.978 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 07:14:10.496 +03:00 [INF] Received HTTP response headers after 518.1976ms - 200
+2023-05-04 07:14:10.496 +03:00 [INF] End processing HTTP request after 518.4667ms - 200
+2023-05-04 07:14:10.513 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 07:14:10.646 +03:00 [INF] Executed ViewResult - view Index executed in 134.2345ms.
+2023-05-04 07:14:10.649 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 15532.1793ms
+2023-05-04 07:14:10.650 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 07:14:10.689 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 15697.1854ms
+2023-05-04 07:14:10.723 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 07:14:10.723 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 07:14:10.728 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 07:14:10.730 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:10.733 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 7.6461ms
+2023-05-04 07:14:10.738 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 14.8459ms
+2023-05-04 07:14:10.767 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 40.4792ms
+2023-05-04 07:14:10.805 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/favicon.ico - -
+2023-05-04 07:14:10.824 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\favicon.ico'
+2023-05-04 07:14:10.825 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/favicon.ico - - - 0 5430 image/x-icon 20.1244ms
+2023-05-04 07:14:22.729 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 07:14:22.730 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:22.730 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 07:14:22.731 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 07:14:22.732 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 07:14:22.732 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 07:14:22.996 +03:00 [INF] Received HTTP response headers after 263.0432ms - 200
+2023-05-04 07:14:22.996 +03:00 [INF] End processing HTTP request after 263.3647ms - 200
+2023-05-04 07:14:22.996 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 07:14:22.996 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 07:14:23.413 +03:00 [INF] Received HTTP response headers after 416.7488ms - 200
+2023-05-04 07:14:23.413 +03:00 [INF] End processing HTTP request after 416.9855ms - 200
+2023-05-04 07:14:23.464 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 07:14:23.469 +03:00 [INF] Executed ViewResult - view Index executed in 4.8947ms.
+2023-05-04 07:14:23.469 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 738.1801ms
+2023-05-04 07:14:23.469 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 07:14:23.475 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 745.1085ms
+2023-05-04 07:14:23.491 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 07:14:23.491 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 07:14:23.491 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 07:14:23.492 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 1.0285ms
+2023-05-04 07:14:23.492 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:23.493 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 2.3588ms
+2023-05-04 07:14:23.511 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.3517ms
+2023-05-04 07:14:23.540 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/favicon.ico - -
+2023-05-04 07:14:23.543 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\favicon.ico'
+2023-05-04 07:14:23.543 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/favicon.ico - - - 0 5430 image/x-icon 2.6785ms
+2023-05-04 07:14:26.430 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 07:14:26.431 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:26.431 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 07:14:26.431 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 07:14:26.431 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 07:14:26.431 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 07:14:26.843 +03:00 [INF] Received HTTP response headers after 411.886ms - 200
+2023-05-04 07:14:26.843 +03:00 [INF] End processing HTTP request after 412.142ms - 200
+2023-05-04 07:14:26.844 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 07:14:26.844 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 07:14:27.066 +03:00 [INF] Received HTTP response headers after 221.8849ms - 200
+2023-05-04 07:14:27.066 +03:00 [INF] End processing HTTP request after 222.1049ms - 200
+2023-05-04 07:14:27.256 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 07:14:27.260 +03:00 [INF] Executed ViewResult - view Index executed in 4.455ms.
+2023-05-04 07:14:27.260 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 829.1059ms
+2023-05-04 07:14:27.260 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 07:14:27.266 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 835.4640ms
+2023-05-04 07:14:27.283 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 07:14:27.283 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 07:14:27.283 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 07:14:27.284 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:27.284 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 1.1381ms
+2023-05-04 07:14:27.284 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 0.9424ms
+2023-05-04 07:14:27.301 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.2832ms
+2023-05-04 07:14:28.367 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Sushi - -
+2023-05-04 07:14:28.368 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:28.368 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.SushiController.Index (Пицца Сайт)'
+2023-05-04 07:14:28.369 +03:00 [INF] Route matched with {action = "Index", controller = "Sushi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Пицца_Сайт.Controllers.SushiController (Пицца Сайт).
+2023-05-04 07:14:28.369 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 07:14:28.376 +03:00 [INF] Executed ViewResult - view Index executed in 6.8712ms.
+2023-05-04 07:14:28.376 +03:00 [INF] Executed action Пицца_Сайт.Controllers.SushiController.Index (Пицца Сайт) in 7.2183ms
+2023-05-04 07:14:28.376 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.SushiController.Index (Пицца Сайт)'
+2023-05-04 07:14:28.377 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Sushi - - - 200 - text/html;+charset=utf-8 10.0194ms
+2023-05-04 07:14:28.397 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 07:14:28.398 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:28.398 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 07:14:28.398 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 07:14:28.398 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 0.8922ms
+2023-05-04 07:14:28.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/images/sushi.jpg - -
+2023-05-04 07:14:28.401 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 2.7823ms
+2023-05-04 07:14:28.409 +03:00 [INF] Sending file. Request path: '/images/sushi.jpg'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\images\sushi.jpg'
+2023-05-04 07:14:28.410 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/images/sushi.jpg - - - 200 127082 image/jpeg 8.8932ms
+2023-05-04 07:14:28.418 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.0945ms
+2023-05-04 07:14:32.696 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Drink - -
+2023-05-04 07:14:32.696 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:32.697 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.DrinkController.Index (Пицца Сайт)'
+2023-05-04 07:14:32.697 +03:00 [INF] Route matched with {action = "Index", controller = "Drink"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Пицца_Сайт.Controllers.DrinkController (Пицца Сайт).
+2023-05-04 07:14:32.698 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 07:14:32.702 +03:00 [INF] Executed ViewResult - view Index executed in 5.0782ms.
+2023-05-04 07:14:32.703 +03:00 [INF] Executed action Пицца_Сайт.Controllers.DrinkController.Index (Пицца Сайт) in 5.3444ms
+2023-05-04 07:14:32.703 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.DrinkController.Index (Пицца Сайт)'
+2023-05-04 07:14:32.704 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Drink - - - 200 - text/html;+charset=utf-8 8.1281ms
+2023-05-04 07:14:32.721 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 07:14:32.721 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:32.721 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 07:14:32.721 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 07:14:32.721 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 0.8912ms
+2023-05-04 07:14:32.722 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 0.8404ms
+2023-05-04 07:14:32.725 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/images/drinks.jpg - -
+2023-05-04 07:14:32.732 +03:00 [INF] The file /images/drinks.jpg was not modified
+2023-05-04 07:14:32.733 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/images/drinks.jpg - - - 304 - image/jpeg 8.0183ms
+2023-05-04 07:14:32.739 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.0925ms
+2023-05-04 07:14:35.032 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/KingSize - -
+2023-05-04 07:14:35.033 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:35.033 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.KingSizeController.Index (Пицца Сайт)'
+2023-05-04 07:14:35.035 +03:00 [INF] Route matched with {action = "Index", controller = "KingSize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.KingSizeController (Пицца Сайт).
+2023-05-04 07:14:35.035 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=KingSize"
+2023-05-04 07:14:35.035 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=KingSize"
+2023-05-04 07:14:35.260 +03:00 [INF] Received HTTP response headers after 224.202ms - 200
+2023-05-04 07:14:35.260 +03:00 [INF] End processing HTTP request after 224.4106ms - 200
+2023-05-04 07:14:35.261 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 07:14:35.269 +03:00 [INF] Executed ViewResult - view Index executed in 8.329ms.
+2023-05-04 07:14:35.269 +03:00 [INF] Executed action Пицца_Сайт.Controllers.KingSizeController.Index (Пицца Сайт) in 234.0694ms
+2023-05-04 07:14:35.269 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.KingSizeController.Index (Пицца Сайт)'
+2023-05-04 07:14:35.271 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/KingSize - - - 200 - text/html;+charset=utf-8 239.2305ms
+2023-05-04 07:14:35.302 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 07:14:35.302 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:35.303 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 0.7991ms
+2023-05-04 07:14:35.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 07:14:35.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 07:14:35.305 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 0.8315ms
+2023-05-04 07:14:35.322 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.0801ms
+2023-05-04 07:14:40.503 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/KingSize/Details/27 - -
+2023-05-04 07:14:40.503 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:40.504 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.KingSizeController.Details (Пицца Сайт)'
+2023-05-04 07:14:40.514 +03:00 [INF] Route matched with {action = "Details", controller = "KingSize"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(UInt32) on controller Пицца_Сайт.Controllers.KingSizeController (Пицца Сайт).
+2023-05-04 07:14:40.522 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/id?id=27"
+2023-05-04 07:14:40.522 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/id?id=27"
+2023-05-04 07:14:40.835 +03:00 [INF] Received HTTP response headers after 312.5536ms - 200
+2023-05-04 07:14:40.835 +03:00 [INF] End processing HTTP request after 312.8471ms - 200
+2023-05-04 07:14:40.837 +03:00 [INF] Executing ViewResult, running view Details.
+2023-05-04 07:14:40.859 +03:00 [INF] Executed ViewResult - view Details executed in 22.9482ms.
+2023-05-04 07:14:40.860 +03:00 [INF] Executed action Пицца_Сайт.Controllers.KingSizeController.Details (Пицца Сайт) in 345.3749ms
+2023-05-04 07:14:40.860 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.KingSizeController.Details (Пицца Сайт)'
+2023-05-04 07:14:40.861 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/KingSize/Details/27 - - - 200 - text/html;+charset=utf-8 358.4114ms
+2023-05-04 07:14:40.888 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 07:14:40.888 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 07:14:40.888 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 07:14:40.888 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 07:14:40.889 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 0.8871ms
+2023-05-04 07:14:40.889 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 1.1168ms
+2023-05-04 07:14:40.891 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/js/count2.js - -
+2023-05-04 07:14:40.892 +03:00 [INF] Sending file. Request path: '/js/count2.js'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\js\count2.js'
+2023-05-04 07:14:40.892 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/js/count2.js - - - 200 661 application/javascript 3.0211ms
+2023-05-04 07:14:40.909 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.8370ms
+2023-05-04 08:14:50.004 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 08:14:50.098 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 08:14:50.098 +03:00 [INF] Hosting environment: Development
+2023-05-04 08:14:50.098 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 08:14:50.116 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 08:14:50.175 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:14:50.208 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:14:50.237 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 08:14:50.270 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:14:50.272 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:14:51.203 +03:00 [INF] Received HTTP response headers after 928.1334ms - 200
+2023-05-04 08:14:51.205 +03:00 [INF] End processing HTTP request after 938.5441ms - 200
+2023-05-04 08:14:51.381 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:14:51.381 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:14:51.612 +03:00 [INF] Received HTTP response headers after 230.9125ms - 200
+2023-05-04 08:14:51.612 +03:00 [INF] End processing HTTP request after 231.2366ms - 200
+2023-05-04 08:14:51.636 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 08:14:51.804 +03:00 [INF] Executed ViewResult - view Index executed in 169.6467ms.
+2023-05-04 08:14:51.807 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1569.5037ms
+2023-05-04 08:14:51.807 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:14:51.853 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1740.0306ms
+2023-05-04 08:14:51.897 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/MyStyle.css?v=CUrvt2I2LT9V87iyWrRKGkB3jklWL7HikobBpf6tukI - -
+2023-05-04 08:14:51.897 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:14:51.899 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-05-04 08:14:51.903 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 08:14:51.903 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-05-04 08:14:51.910 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:14:51.914 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 16.8331ms
+2023-05-04 08:14:51.920 +03:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\css\site.css'
+2023-05-04 08:14:51.920 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-05-04 08:14:51.920 +03:00 [INF] Sending file. Request path: '/MyStyle.css'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\MyStyle.css'
+2023-05-04 08:14:51.921 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/lib/bootstrap/dist/css/bootstrap.min.css - - - 0 162720 text/css 18.0816ms
+2023-05-04 08:14:51.921 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 0 194 text/css 23.3199ms
+2023-05-04 08:14:51.921 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/MyStyle.css?v=CUrvt2I2LT9V87iyWrRKGkB3jklWL7HikobBpf6tukI - - - 0 1503 text/css 31.4868ms
+2023-05-04 08:14:51.924 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 08:14:51.929 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 4.1030ms
+2023-05-04 08:14:51.945 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 40.4392ms
+2023-05-04 08:14:51.950 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:14:51.951 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:14:51.952 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 1.6033ms
+2023-05-04 08:14:51.995 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/favicon.ico - -
+2023-05-04 08:14:51.996 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\favicon.ico'
+2023-05-04 08:14:51.996 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/favicon.ico - - - 0 5430 image/x-icon 1.1956ms
+2023-05-04 08:16:50.960 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 08:16:51.045 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 08:16:51.045 +03:00 [INF] Hosting environment: Development
+2023-05-04 08:16:51.045 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 08:16:51.065 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 08:16:51.120 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:16:51.146 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:16:51.171 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 08:16:51.201 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:16:51.203 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:16:51.693 +03:00 [INF] Received HTTP response headers after 486.3276ms - 200
+2023-05-04 08:16:51.695 +03:00 [INF] End processing HTTP request after 496.9758ms - 200
+2023-05-04 08:16:51.858 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:16:51.859 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:16:52.079 +03:00 [INF] Received HTTP response headers after 220.6062ms - 200
+2023-05-04 08:16:52.079 +03:00 [INF] End processing HTTP request after 220.8816ms - 200
+2023-05-04 08:16:52.104 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 08:16:52.267 +03:00 [INF] Executed ViewResult - view Index executed in 164.6646ms.
+2023-05-04 08:16:52.270 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1098.7781ms
+2023-05-04 08:16:52.271 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:16:52.317 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1253.5272ms
+2023-05-04 08:16:52.354 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 08:16:52.356 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:16:52.367 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 08:16:52.367 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 4.8420ms
+2023-05-04 08:16:52.371 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:16:52.381 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 24.3789ms
+2023-05-04 08:16:52.420 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 54.2808ms
+2023-05-04 08:17:26.122 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 08:17:26.203 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 08:17:26.204 +03:00 [INF] Hosting environment: Development
+2023-05-04 08:17:26.204 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 08:17:26.227 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 08:17:26.281 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:17:26.310 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:17:26.335 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 08:17:26.367 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:17:26.371 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:17:26.869 +03:00 [INF] Received HTTP response headers after 495.426ms - 200
+2023-05-04 08:17:26.870 +03:00 [INF] End processing HTTP request after 507.6057ms - 200
+2023-05-04 08:17:27.017 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:17:27.017 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:17:27.236 +03:00 [INF] Received HTTP response headers after 218.812ms - 200
+2023-05-04 08:17:27.237 +03:00 [INF] End processing HTTP request after 219.1878ms - 200
+2023-05-04 08:17:27.286 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 08:17:27.442 +03:00 [INF] Executed ViewResult - view Index executed in 159.5701ms.
+2023-05-04 08:17:27.445 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1109.7822ms
+2023-05-04 08:17:27.446 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:17:27.487 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1263.9719ms
+2023-05-04 08:17:27.520 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:17:27.521 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 08:17:27.522 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:17:27.524 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 3.7388ms
+2023-05-04 08:17:27.530 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 3.8374ms
+2023-05-04 08:17:27.531 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 08:17:27.565 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.4321ms
+2023-05-04 08:42:44.172 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 08:42:44.260 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 08:42:44.261 +03:00 [INF] Hosting environment: Development
+2023-05-04 08:42:44.261 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 08:42:44.277 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 08:42:44.334 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:42:44.366 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:42:44.397 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 08:42:44.432 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:42:44.435 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:42:44.924 +03:00 [INF] Received HTTP response headers after 484.629ms - 200
+2023-05-04 08:42:44.926 +03:00 [INF] End processing HTTP request after 497.0766ms - 200
+2023-05-04 08:42:45.085 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:42:45.085 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:42:45.330 +03:00 [INF] Received HTTP response headers after 244.5871ms - 200
+2023-05-04 08:42:45.330 +03:00 [INF] End processing HTTP request after 244.8712ms - 200
+2023-05-04 08:42:45.358 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 08:42:45.503 +03:00 [INF] Executed ViewResult - view Index executed in 145.0025ms.
+2023-05-04 08:42:45.508 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1110.2004ms
+2023-05-04 08:42:45.509 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:42:45.560 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1285.2238ms
+2023-05-04 08:42:45.591 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:42:45.593 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 08:42:45.595 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:42:45.597 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 5.7698ms
+2023-05-04 08:42:45.626 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 08:42:45.630 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 4.1481ms
+2023-05-04 08:42:45.634 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.0627ms
+2023-05-04 08:45:59.946 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 08:46:00.050 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 08:46:00.051 +03:00 [INF] Hosting environment: Development
+2023-05-04 08:46:00.051 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 08:46:00.068 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 08:46:00.130 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:46:00.161 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:46:00.188 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 08:46:00.223 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:46:00.226 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:46:00.709 +03:00 [INF] Received HTTP response headers after 479.9099ms - 200
+2023-05-04 08:46:00.711 +03:00 [INF] End processing HTTP request after 490.786ms - 200
+2023-05-04 08:46:00.888 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:46:00.888 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:46:01.111 +03:00 [INF] Received HTTP response headers after 222.6828ms - 200
+2023-05-04 08:46:01.111 +03:00 [INF] End processing HTTP request after 223.0802ms - 200
+2023-05-04 08:46:01.153 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 08:46:01.304 +03:00 [INF] Executed ViewResult - view Index executed in 153.3246ms.
+2023-05-04 08:46:01.307 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1118.6193ms
+2023-05-04 08:46:01.308 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:46:01.360 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1294.0237ms
+2023-05-04 08:46:01.389 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 08:46:01.389 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:46:01.390 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 08:46:01.396 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:46:01.401 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 8.7394ms
+2023-05-04 08:46:01.401 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 11.7078ms
+2023-05-04 08:46:01.432 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 41.6469ms
+2023-05-04 08:46:01.445 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:46:01.446 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:46:01.446 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 1.6473ms
+2023-05-04 08:47:01.009 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 08:47:01.095 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 08:47:01.095 +03:00 [INF] Hosting environment: Development
+2023-05-04 08:47:01.095 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 08:47:01.113 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 08:47:01.170 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:47:01.203 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:47:01.229 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 08:47:01.259 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:47:01.262 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:47:01.759 +03:00 [INF] Received HTTP response headers after 492.4581ms - 200
+2023-05-04 08:47:01.761 +03:00 [INF] End processing HTTP request after 504.6631ms - 200
+2023-05-04 08:47:01.955 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:47:01.956 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:47:02.185 +03:00 [INF] Received HTTP response headers after 229.6012ms - 200
+2023-05-04 08:47:02.185 +03:00 [INF] End processing HTTP request after 230.0994ms - 200
+2023-05-04 08:47:02.204 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 08:47:02.365 +03:00 [INF] Executed ViewResult - view Index executed in 161.3558ms.
+2023-05-04 08:47:02.368 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1139.0077ms
+2023-05-04 08:47:02.369 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:47:02.417 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1307.0930ms
+2023-05-04 08:47:02.450 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/images/pages/pizza_fixed.png - -
+2023-05-04 08:47:02.451 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:47:02.455 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 08:47:02.459 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:47:02.464 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 13.4631ms
+2023-05-04 08:47:02.473 +03:00 [INF] Sending file. Request path: '/images/pages/pizza_fixed.png'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\images\pages\pizza_fixed.png'
+2023-05-04 08:47:02.473 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/images/pages/pizza_fixed.png - - - 0 81631 image/png 22.9583ms
+2023-05-04 08:47:02.487 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 08:47:02.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 5.2789ms
+2023-05-04 08:47:02.498 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 43.9325ms
+2023-05-04 08:54:48.049 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 08:54:48.135 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 08:54:48.135 +03:00 [INF] Hosting environment: Development
+2023-05-04 08:54:48.136 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 08:54:48.157 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 08:54:48.216 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:54:48.254 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:54:48.280 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 08:54:48.313 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:54:48.316 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 08:54:49.079 +03:00 [INF] Received HTTP response headers after 759.5417ms - 200
+2023-05-04 08:54:49.081 +03:00 [INF] End processing HTTP request after 770.2703ms - 200
+2023-05-04 08:54:49.239 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:54:49.239 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 08:54:49.499 +03:00 [INF] Received HTTP response headers after 260.3926ms - 200
+2023-05-04 08:54:49.500 +03:00 [INF] End processing HTTP request after 260.8462ms - 200
+2023-05-04 08:54:49.553 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 08:54:49.693 +03:00 [INF] Executed ViewResult - view Index executed in 144.5764ms.
+2023-05-04 08:54:49.698 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1416.9003ms
+2023-05-04 08:54:49.698 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 08:54:49.739 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1584.5750ms
+2023-05-04 08:54:49.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 08:54:49.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 08:54:49.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:54:49.777 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:54:49.784 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 8.3805ms
+2023-05-04 08:54:49.785 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 14.9861ms
+2023-05-04 08:54:49.808 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.5712ms
+2023-05-04 08:54:49.824 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:54:49.825 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:54:49.825 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 1.6202ms
+2023-05-04 08:59:01.066 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Home/Details/1 - -
+2023-05-04 08:59:01.069 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:59:01.071 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Details (Пицца Сайт)'
+2023-05-04 08:59:01.086 +03:00 [INF] Route matched with {action = "Details", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Details(UInt32) on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 08:59:01.100 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/id?id=1"
+2023-05-04 08:59:01.100 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/id?id=1"
+2023-05-04 08:59:01.498 +03:00 [INF] Received HTTP response headers after 397.4193ms - 200
+2023-05-04 08:59:01.498 +03:00 [INF] End processing HTTP request after 397.7208ms - 200
+2023-05-04 08:59:01.501 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/nameCategory?nameCategory=4 мяса"
+2023-05-04 08:59:01.501 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/nameCategory?nameCategory=4 мяса"
+2023-05-04 08:59:01.717 +03:00 [INF] Received HTTP response headers after 215.5398ms - 200
+2023-05-04 08:59:01.717 +03:00 [INF] End processing HTTP request after 215.8803ms - 200
+2023-05-04 08:59:01.719 +03:00 [INF] Executing ViewResult, running view Details.
+2023-05-04 08:59:01.774 +03:00 [INF] Executed ViewResult - view Details executed in 55.8507ms.
+2023-05-04 08:59:01.774 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Details (Пицца Сайт) in 687.9814ms
+2023-05-04 08:59:01.774 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Details (Пицца Сайт)'
+2023-05-04 08:59:01.778 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Home/Details/1 - - - 200 - text/html;+charset=utf-8 711.5677ms
+2023-05-04 08:59:01.801 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/js/count2.js - -
+2023-05-04 08:59:01.801 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 08:59:01.801 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:59:01.804 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 08:59:01.809 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-05-04 08:59:01.839 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 36.6175ms
+2023-05-04 08:59:01.839 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:59:01.850 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 48.4690ms
+2023-05-04 08:59:01.856 +03:00 [INF] Sending file. Request path: '/js/count2.js'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\js\count2.js'
+2023-05-04 08:59:01.856 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\js\site.js'
+2023-05-04 08:59:01.856 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 0 230 application/javascript 47.0703ms
+2023-05-04 08:59:01.856 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/js/count2.js - - - 200 661 application/javascript 55.6596ms
+2023-05-04 08:59:01.872 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 68.2999ms
+2023-05-04 08:59:05.161 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44318/Home/Details/1?menuid=1 application/x-www-form-urlencoded 260
+2023-05-04 08:59:05.163 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 08:59:05.163 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.DetailsPost (Пицца Сайт)'
+2023-05-04 08:59:05.169 +03:00 [INF] Route matched with {action = "Details", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DetailsPost(Пицца_Сайт.Models.ViewModels.AllPizzaViewModels) on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 08:59:05.209 +03:00 [INF] Executing RedirectResult, redirecting to /Cart.
+2023-05-04 08:59:05.209 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.DetailsPost (Пицца Сайт) in 39.7662ms
+2023-05-04 08:59:05.209 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.DetailsPost (Пицца Сайт)'
+2023-05-04 08:59:05.209 +03:00 [INF] Session started; Key:1a935c35-1f84-ed0f-e38b-91fe9012193a, Id:7f5a44c0-3e06-52b2-58c9-a1190513767e
+2023-05-04 08:59:05.211 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44318/Home/Details/1?menuid=1 application/x-www-form-urlencoded 260 - 302 - - 50.6034ms
+2023-05-04 08:59:05.218 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Cart - -
+2023-05-04 08:59:05.220 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.CartController.Index (Пицца Сайт)'
+2023-05-04 08:59:05.223 +03:00 [INF] Route matched with {action = "Index", controller = "Cart"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Пицца_Сайт.Models.ChangesCount) on controller Пицца_Сайт.Controllers.CartController (Пицца Сайт).
+2023-05-04 08:59:05.235 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/id?id=1"
+2023-05-04 08:59:05.235 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/id?id=1"
+2023-05-04 08:59:05.463 +03:00 [INF] Received HTTP response headers after 227.4727ms - 200
+2023-05-04 08:59:05.463 +03:00 [INF] End processing HTTP request after 227.8837ms - 200
+2023-05-04 08:59:05.464 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/id?id=1"
+2023-05-04 08:59:05.464 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/id?id=1"
+2023-05-04 08:59:05.734 +03:00 [INF] Received HTTP response headers after 270.521ms - 200
+2023-05-04 08:59:05.735 +03:00 [INF] End processing HTTP request after 270.7943ms - 200
+2023-05-04 08:59:05.746 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 08:59:05.759 +03:00 [INF] Executed ViewResult - view Index executed in 14.5845ms.
+2023-05-04 08:59:05.760 +03:00 [INF] Executed action Пицца_Сайт.Controllers.CartController.Index (Пицца Сайт) in 536.8313ms
+2023-05-04 08:59:05.760 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.CartController.Index (Пицца Сайт)'
+2023-05-04 08:59:05.764 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Cart - - - 200 - text/html;+charset=utf-8 545.4803ms
+2023-05-04 08:59:05.796 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:59:05.796 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 08:59:05.796 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 08:59:05.797 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 0.7146ms
+2023-05-04 08:59:05.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 2.7556ms
+2023-05-04 08:59:05.818 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.6502ms
+2023-05-04 08:59:08.458 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Order - -
+2023-05-04 08:59:08.459 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.OrderController.Index (Пицца Сайт)'
+2023-05-04 08:59:08.460 +03:00 [INF] Route matched with {action = "Index", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index(Пицца_Сайт.Models.ChangesCount) on controller Пицца_Сайт.Controllers.OrderController (Пицца Сайт).
+2023-05-04 08:59:08.470 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 08:59:08.513 +03:00 [INF] Executed ViewResult - view Index executed in 42.5368ms.
+2023-05-04 08:59:08.513 +03:00 [INF] Executed action Пицца_Сайт.Controllers.OrderController.Index (Пицца Сайт) in 52.667ms
+2023-05-04 08:59:08.513 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.OrderController.Index (Пицца Сайт)'
+2023-05-04 08:59:08.516 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Order - - - 200 - text/html;+charset=utf-8 57.4343ms
+2023-05-04 08:59:08.536 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:59:08.536 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 08:59:08.536 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 08:59:08.536 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 0.6422ms
+2023-05-04 08:59:08.537 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 1.1578ms
+2023-05-04 08:59:08.560 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.8280ms
+2023-05-04 08:59:16.706 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44318/Order application/x-www-form-urlencoded 429
+2023-05-04 08:59:16.706 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.OrderController.Index (Пицца Сайт)'
+2023-05-04 08:59:16.710 +03:00 [INF] Route matched with {action = "Index", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Пицца_Сайт.Models.ViewModels.OrderViewModels) on controller Пицца_Сайт.Controllers.OrderController (Пицца Сайт).
+2023-05-04 08:59:16.718 +03:00 [INF] Start processing HTTP request POST "http://jobaspapi-001-site1.gtempurl.com/api/Order/"
+2023-05-04 08:59:16.718 +03:00 [INF] Sending HTTP request POST "http://jobaspapi-001-site1.gtempurl.com/api/Order/"
+2023-05-04 08:59:17.163 +03:00 [INF] Received HTTP response headers after 444.3764ms - 200
+2023-05-04 08:59:17.163 +03:00 [INF] End processing HTTP request after 444.6958ms - 200
+2023-05-04 08:59:17.176 +03:00 [INF] Executing RedirectResult, redirecting to /Order/OrderResult?NumberOrder=42096&Name=test&IsStatus=True.
+2023-05-04 08:59:17.176 +03:00 [INF] Executed action Пицца_Сайт.Controllers.OrderController.Index (Пицца Сайт) in 466.2073ms
+2023-05-04 08:59:17.177 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.OrderController.Index (Пицца Сайт)'
+2023-05-04 08:59:17.177 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44318/Order application/x-www-form-urlencoded 429 - 302 - - 471.8280ms
+2023-05-04 08:59:17.184 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Order/OrderResult?NumberOrder=42096&Name=test&IsStatus=True - -
+2023-05-04 08:59:17.186 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.OrderController.OrderResult (Пицца Сайт)'
+2023-05-04 08:59:17.189 +03:00 [INF] Route matched with {action = "OrderResult", controller = "Order"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult OrderResult(Пицца_Сайт.Models.StatusOrder) on controller Пицца_Сайт.Controllers.OrderController (Пицца Сайт).
+2023-05-04 08:59:17.195 +03:00 [INF] Executing ViewResult, running view OrderResult.
+2023-05-04 08:59:17.213 +03:00 [INF] Executed ViewResult - view OrderResult executed in 19.7858ms.
+2023-05-04 08:59:17.213 +03:00 [INF] Executed action Пицца_Сайт.Controllers.OrderController.OrderResult (Пицца Сайт) in 23.9445ms
+2023-05-04 08:59:17.214 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.OrderController.OrderResult (Пицца Сайт)'
+2023-05-04 08:59:17.218 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Order/OrderResult?NumberOrder=42096&Name=test&IsStatus=True - - - 200 - text/html;+charset=utf-8 34.3975ms
+2023-05-04 08:59:17.266 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 08:59:17.267 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 0.9810ms
+2023-05-04 08:59:17.270 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 08:59:17.270 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 08:59:17.272 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 1.4395ms
+2023-05-04 08:59:17.292 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 22.0139ms
+2023-05-04 09:03:58.458 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 09:03:58.548 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 09:03:58.548 +03:00 [INF] Hosting environment: Development
+2023-05-04 09:03:58.548 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 09:03:58.564 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 09:03:58.624 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:03:58.648 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 09:03:58.680 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:03:58.682 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:03:59.172 +03:00 [INF] Received HTTP response headers after 486.3806ms - 200
+2023-05-04 09:03:59.174 +03:00 [INF] End processing HTTP request after 496.8769ms - 200
+2023-05-04 09:03:59.364 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:03:59.364 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:03:59.585 +03:00 [INF] Received HTTP response headers after 221.5699ms - 200
+2023-05-04 09:03:59.585 +03:00 [INF] End processing HTTP request after 221.8855ms - 200
+2023-05-04 09:03:59.610 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 09:03:59.688 +03:00 [INF] Accessing expired session, Key:1a935c35-1f84-ed0f-e38b-91fe9012193a
+2023-05-04 09:03:59.768 +03:00 [INF] Executed ViewResult - view Index executed in 158.9939ms.
+2023-05-04 09:03:59.773 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1123.9538ms
+2023-05-04 09:03:59.774 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:03:59.834 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1272.4115ms
+2023-05-04 09:03:59.860 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-05-04 09:03:59.870 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-05-04 09:03:59.870 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 09:03:59.874 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 09:03:59.875 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 09:03:59.877 +03:00 [INF] Accessing expired session, Key:1a935c35-1f84-ed0f-e38b-91fe9012193a
+2023-05-04 09:03:59.879 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 3.9480ms
+2023-05-04 09:03:59.879 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 14.5341ms
+2023-05-04 09:03:59.886 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-05-04 09:03:59.886 +03:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\css\site.css'
+2023-05-04 09:03:59.886 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/lib/bootstrap/dist/css/bootstrap.min.css - - - 0 162720 text/css 20.2076ms
+2023-05-04 09:03:59.886 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 0 194 text/css 26.0754ms
+2023-05-04 09:03:59.908 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.8433ms
+2023-05-04 09:03:59.924 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 09:03:59.925 +03:00 [INF] Accessing expired session, Key:1a935c35-1f84-ed0f-e38b-91fe9012193a
+2023-05-04 09:03:59.925 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 1.3204ms
+2023-05-04 09:07:58.583 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 09:07:58.682 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 09:07:58.682 +03:00 [INF] Hosting environment: Development
+2023-05-04 09:07:58.682 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 09:07:58.706 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 09:07:58.766 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:07:58.793 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 09:07:58.821 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:07:58.824 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:07:59.310 +03:00 [INF] Received HTTP response headers after 481.4838ms - 200
+2023-05-04 09:07:59.311 +03:00 [INF] End processing HTTP request after 492.7987ms - 200
+2023-05-04 09:07:59.475 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:07:59.475 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:07:59.693 +03:00 [INF] Received HTTP response headers after 218.4192ms - 200
+2023-05-04 09:07:59.693 +03:00 [INF] End processing HTTP request after 218.7571ms - 200
+2023-05-04 09:07:59.717 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 09:07:59.786 +03:00 [INF] Accessing expired session, Key:1a935c35-1f84-ed0f-e38b-91fe9012193a
+2023-05-04 09:07:59.861 +03:00 [INF] Executed ViewResult - view Index executed in 142.2574ms.
+2023-05-04 09:07:59.864 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1071.3459ms
+2023-05-04 09:07:59.865 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:07:59.914 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1211.3012ms
+2023-05-04 09:07:59.947 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 09:07:59.950 +03:00 [INF] Accessing expired session, Key:1a935c35-1f84-ed0f-e38b-91fe9012193a
+2023-05-04 09:07:59.951 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 4.2740ms
+2023-05-04 09:07:59.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 09:07:59.988 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 09:07:59.992 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.5960ms
+2023-05-04 09:07:59.996 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 7.2912ms
+2023-05-04 09:16:48.739 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 09:16:48.853 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 09:16:48.853 +03:00 [INF] Hosting environment: Development
+2023-05-04 09:16:48.853 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 09:16:48.869 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 09:16:48.932 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:16:48.967 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:16:48.997 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 09:16:49.031 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:16:49.033 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:16:49.642 +03:00 [INF] Received HTTP response headers after 604.2303ms - 200
+2023-05-04 09:16:49.644 +03:00 [INF] End processing HTTP request after 615.6786ms - 200
+2023-05-04 09:16:49.814 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:16:49.814 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:16:50.018 +03:00 [INF] Received HTTP response headers after 203.9454ms - 200
+2023-05-04 09:16:50.018 +03:00 [INF] End processing HTTP request after 204.2224ms - 200
+2023-05-04 09:16:50.045 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 09:16:50.226 +03:00 [INF] Executed ViewResult - view Index executed in 184.3594ms.
+2023-05-04 09:16:50.230 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1233.2427ms
+2023-05-04 09:16:50.231 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:16:50.276 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1408.9947ms
+2023-05-04 09:16:50.318 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 09:16:50.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 09:16:50.323 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:16:50.328 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 5.8438ms
+2023-05-04 09:16:50.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 14.7742ms
+2023-05-04 09:16:50.337 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 09:16:50.377 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 40.3248ms
+2023-05-04 09:16:50.462 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/favicon.ico - -
+2023-05-04 09:16:50.508 +03:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\favicon.ico'
+2023-05-04 09:16:50.508 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/favicon.ico - - - 0 5430 image/x-icon 50.0097ms
+2023-05-04 09:20:05.398 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 09:20:05.482 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 09:20:05.482 +03:00 [INF] Hosting environment: Development
+2023-05-04 09:20:05.482 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 09:20:05.502 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 09:20:05.559 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:20:05.588 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:20:05.613 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 09:20:05.647 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:20:05.649 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:20:26.967 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:20:26.967 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:20:27.628 +03:00 [INF] Received HTTP response headers after 650.3069ms - 200
+2023-05-04 09:20:27.631 +03:00 [INF] End processing HTTP request after 663.9164ms - 200
+2023-05-04 09:20:27.680 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 09:20:27.811 +03:00 [INF] Executed ViewResult - view Index executed in 131.9844ms.
+2023-05-04 09:20:27.814 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 22200.7032ms
+2023-05-04 09:20:27.815 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:20:27.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 22366.7404ms
+2023-05-04 09:20:27.905 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-05-04 09:20:27.906 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 09:20:27.910 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 09:20:27.916 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/images/pages/pizza_fixed.png - -
+2023-05-04 09:20:27.918 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-05-04 09:20:27.918 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-05-04 09:20:27.921 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/MyStyle.css?v=CUrvt2I2LT9V87iyWrRKGkB3jklWL7HikobBpf6tukI - -
+2023-05-04 09:20:27.928 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 09:20:27.930 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:20:27.934 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 26.8275ms
+2023-05-04 09:20:27.935 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 7.1845ms
+2023-05-04 09:20:27.940 +03:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\js\site.js'
+2023-05-04 09:20:27.940 +03:00 [INF] Sending file. Request path: '/images/pages/pizza_fixed.png'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\images\pages\pizza_fixed.png'
+2023-05-04 09:20:27.940 +03:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-05-04 09:20:27.940 +03:00 [INF] Sending file. Request path: '/MyStyle.css'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\MyStyle.css'
+2023-05-04 09:20:27.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 0 230 application/javascript 22.2971ms
+2023-05-04 09:20:27.940 +03:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\css\site.css'
+2023-05-04 09:20:27.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/images/pages/pizza_fixed.png - - - 0 81631 image/png 24.2933ms
+2023-05-04 09:20:27.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/lib/bootstrap/dist/css/bootstrap.min.css - - - 0 162720 text/css 36.1491ms
+2023-05-04 09:20:27.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 0 194 text/css 22.3760ms
+2023-05-04 09:20:27.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/MyStyle.css?v=CUrvt2I2LT9V87iyWrRKGkB3jklWL7HikobBpf6tukI - - - 0 1503 text/css 19.4837ms
+2023-05-04 09:20:27.963 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 54.3656ms
+2023-05-04 09:21:03.293 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 09:21:03.376 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 09:21:03.376 +03:00 [INF] Hosting environment: Development
+2023-05-04 09:21:03.376 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 09:21:03.400 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 09:21:03.458 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:21:03.489 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:21:03.516 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 09:21:03.546 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:21:03.548 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:21:04.038 +03:00 [INF] Received HTTP response headers after 486.9097ms - 200
+2023-05-04 09:21:04.040 +03:00 [INF] End processing HTTP request after 497.2425ms - 200
+2023-05-04 09:21:04.196 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:21:04.196 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:21:04.417 +03:00 [INF] Received HTTP response headers after 221.1147ms - 200
+2023-05-04 09:21:04.418 +03:00 [INF] End processing HTTP request after 221.6ms - 200
+2023-05-04 09:21:04.467 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 09:21:04.632 +03:00 [INF] Executed ViewResult - view Index executed in 167.7545ms.
+2023-05-04 09:21:04.636 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1119.7683ms
+2023-05-04 09:21:04.636 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:21:04.676 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1278.9049ms
+2023-05-04 09:21:04.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 09:21:04.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 09:21:04.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 09:21:04.709 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:21:04.710 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 7.9874ms
+2023-05-04 09:21:04.721 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 19.0092ms
+2023-05-04 09:21:04.750 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 45.9786ms
+2023-05-04 09:21:04.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 09:21:04.770 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:21:04.770 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 1.3525ms
+2023-05-04 09:56:03.808 +03:00 [INF] User profile is available. Using 'C:\Users\Sasha\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 09:56:03.897 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 09:56:03.897 +03:00 [INF] Hosting environment: Development
+2023-05-04 09:56:03.897 +03:00 [INF] Content root path: C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\
+2023-05-04 09:56:03.917 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2023-05-04 09:56:03.990 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:56:04.034 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:56:04.061 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Пицца_Сайт.Controllers.HomeController (Пицца Сайт).
+2023-05-04 09:56:04.095 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:56:04.098 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/MenuItem/nameCategory?nameCategory=Pizza"
+2023-05-04 09:56:04.899 +03:00 [INF] Received HTTP response headers after 797.917ms - 200
+2023-05-04 09:56:04.901 +03:00 [INF] End processing HTTP request after 809.2127ms - 200
+2023-05-04 09:56:05.060 +03:00 [INF] Start processing HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:56:05.060 +03:00 [INF] Sending HTTP request GET "http://jobaspapi-001-site1.gtempurl.com/api/Pizza/"
+2023-05-04 09:56:05.303 +03:00 [INF] Received HTTP response headers after 243.4901ms - 200
+2023-05-04 09:56:05.303 +03:00 [INF] End processing HTTP request after 243.8385ms - 200
+2023-05-04 09:56:05.334 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 09:56:05.491 +03:00 [INF] Executed ViewResult - view Index executed in 158.7422ms.
+2023-05-04 09:56:05.495 +03:00 [INF] Executed action Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт) in 1433.4052ms
+2023-05-04 09:56:05.495 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.HomeController.Index (Пицца Сайт)'
+2023-05-04 09:56:05.538 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 1623.3739ms
+2023-05-04 09:56:05.576 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 09:56:05.576 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 09:56:05.577 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 09:56:05.583 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:56:05.586 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 9.1722ms
+2023-05-04 09:56:05.589 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 12.5705ms
+2023-05-04 09:56:05.621 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 44.4999ms
+2023-05-04 09:56:15.138 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Sushi - -
+2023-05-04 09:56:15.140 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:56:15.140 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.SushiController.Index (Пицца Сайт)'
+2023-05-04 09:56:15.141 +03:00 [INF] Route matched with {action = "Index", controller = "Sushi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Пицца_Сайт.Controllers.SushiController (Пицца Сайт).
+2023-05-04 09:56:15.142 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 09:56:15.153 +03:00 [INF] Executed ViewResult - view Index executed in 11.7277ms.
+2023-05-04 09:56:15.153 +03:00 [INF] Executed action Пицца_Сайт.Controllers.SushiController.Index (Пицца Сайт) in 12.2498ms
+2023-05-04 09:56:15.153 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.SushiController.Index (Пицца Сайт)'
+2023-05-04 09:56:15.155 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Sushi - - - 200 - text/html;+charset=utf-8 16.6468ms
+2023-05-04 09:56:15.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 09:56:15.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/images/sushi.jpg - -
+2023-05-04 09:56:15.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 09:56:15.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 09:56:15.188 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:56:15.189 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 1.2171ms
+2023-05-04 09:56:15.189 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 3.5862ms
+2023-05-04 09:56:15.204 +03:00 [INF] Sending file. Request path: '/images/sushi.jpg'. Physical path: 'C:\Users\Sasha\source\repos\Пицца Сайт\Пицца Сайт\wwwroot\images\sushi.jpg'
+2023-05-04 09:56:15.204 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/images/sushi.jpg - - - 200 127082 image/jpeg 16.6384ms
+2023-05-04 09:56:15.208 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.7810ms
+2023-05-04 09:56:17.557 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Drink - -
+2023-05-04 09:56:17.558 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:56:17.558 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.DrinkController.Index (Пицца Сайт)'
+2023-05-04 09:56:17.559 +03:00 [INF] Route matched with {action = "Index", controller = "Drink"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Пицца_Сайт.Controllers.DrinkController (Пицца Сайт).
+2023-05-04 09:56:17.559 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 09:56:17.566 +03:00 [INF] Executed ViewResult - view Index executed in 7.1734ms.
+2023-05-04 09:56:17.566 +03:00 [INF] Executed action Пицца_Сайт.Controllers.DrinkController.Index (Пицца Сайт) in 7.5007ms
+2023-05-04 09:56:17.566 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.DrinkController.Index (Пицца Сайт)'
+2023-05-04 09:56:17.568 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Drink - - - 200 - text/html;+charset=utf-8 11.4080ms
+2023-05-04 09:56:17.595 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 09:56:17.595 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/images/drinks.jpg - -
+2023-05-04 09:56:17.595 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 09:56:17.595 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 09:56:17.596 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:56:17.596 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 1.1141ms
+2023-05-04 09:56:17.596 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 1.2771ms
+2023-05-04 09:56:17.606 +03:00 [INF] The file /images/drinks.jpg was not modified
+2023-05-04 09:56:17.607 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/images/drinks.jpg - - - 304 - image/jpeg 11.5899ms
+2023-05-04 09:56:17.621 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.1717ms
+2023-05-04 09:56:27.004 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Sushi - -
+2023-05-04 09:56:27.005 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:56:27.005 +03:00 [INF] Executing endpoint 'Пицца_Сайт.Controllers.SushiController.Index (Пицца Сайт)'
+2023-05-04 09:56:27.005 +03:00 [INF] Route matched with {action = "Index", controller = "Sushi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Пицца_Сайт.Controllers.SushiController (Пицца Сайт).
+2023-05-04 09:56:27.005 +03:00 [INF] Executing ViewResult, running view Index.
+2023-05-04 09:56:27.009 +03:00 [INF] Executed ViewResult - view Index executed in 3.6318ms.
+2023-05-04 09:56:27.009 +03:00 [INF] Executed action Пицца_Сайт.Controllers.SushiController.Index (Пицца Сайт) in 3.8063ms
+2023-05-04 09:56:27.009 +03:00 [INF] Executed endpoint 'Пицца_Сайт.Controllers.SushiController.Index (Пицца Сайт)'
+2023-05-04 09:56:27.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Sushi - - - 200 - text/html;+charset=utf-8 7.0234ms
+2023-05-04 09:56:27.032 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - -
+2023-05-04 09:56:27.032 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_vs/browserLink - -
+2023-05-04 09:56:27.032 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2023-05-04 09:56:27.032 +03:00 [WRN] Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid. For more information go to http://aka.ms/dataprotectionwarning
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2023-05-04 09:56:27.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 12008 application/javascript;+charset=utf-8 1.1041ms
+2023-05-04 09:56:27.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Пицца_Сайт.styles.css - - - 404 - - 1.2530ms
+2023-05-04 09:56:27.052 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.4650ms

@@ -1,0 +1,117 @@
+﻿@model Пицца_Сайт.Models.ShoppingCart
+
+
+
+
+<div class=" text-center">
+    <h2>Ваша корзина</h2>
+</div>
+<div class=" card">
+    <div class="card-header bg-dark text-light ml-0 " style="height:40px">
+    </div>
+        <div class="col-12 text-center">
+            <table class="table table-bordered table-striped text-break" style="width:100%">
+                <thead>
+                    <tr class="text-center">
+                        <th>Блюдо</th>
+                        <th>Кол-во</th>
+                        <th>Цена</th>
+                        <th>Итого</th>
+                        <th>Фото</th>
+                        <th></th>
+
+
+                    </tr>
+                </thead>
+            @if (Model.CartsList != null)
+                {
+                    <tbody>
+
+                    @foreach (var item in Model.CartsList)
+                        {
+                            
+                            <tr class="text-center" style="vertical-align: text-top">
+                            <td width="35%">
+                                @item.Name&nbsp;&nbsp;∅ @if (item.MenuNameCategory == "Pizza")
+                                {
+                                    @item.Pizza.SizePizza.Size;
+                                }
+                            </td>
+                                <td width="5%">@item.Count</td>
+                                <td width="10%">@item.Price</td>
+                                <td width="10%">@(item.Price * item.Count)</td>
+                                <td><img width="150px" src="@item.ImagePatch"></td>
+                                <td width="15%" class="text-center" btn-group" role="group">
+
+                                    <a asp-controller="Cart" asp-action="Plus"  asp-route-id="@item.MenuId" class="btn  borderBtn1">
+
+                                        <i class="bi bi-plus-square"></i>
+                                    </a> &nbsp;&nbsp;
+                                    <a asp-controller="Cart" asp-action="Minus"  asp-route-id="@item.MenuId" class="btn borderBtn2">
+
+                                        <i class="bi bi-dash-square"></i>
+                                    </a>&nbsp;&nbsp;
+
+                                    <a asp-controller="Cart" asp-action="Remove" asp-route-id="@item.MenuId" class="btn btn-outline-danger">
+
+                                        <i class="bi bi-trash-fill"></i>
+                                    </a>
+                                    
+                                </td>
+                            </tr>
+
+                        }
+                    </tbody>
+            }                                   
+
+            </table>
+        </div>
+        <div class="content-details  text-center">
+            <div ></div>
+            <div class="card ">
+                <h4>Total = @Model.TotalSumma грн</h4>
+            </div>
+        </div>
+        <div style="height:50px">
+		</div>
+        <div class=container>
+            <div class="row justify-content-around">
+                <div class="col-3">
+                    <a asp-action="Index" asp-controller="Home" class="btn-primary btn form-control  " style="background-color:cadetblue;opacity:0.6">Продолжить  покупки</a>
+                </div>
+                <div class="col-3">
+                    @if (Model.TotalSumma!=0)
+                    {
+                        <a asp-action="Index" asp-controller="Order" class="btn-primary btn form-control " style="background-color:darkslateblue;opacity:0.6">Оформить Заказ</a>
+                    }
+                
+                </div>
+            </div>
+            
+        </div>
+        
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

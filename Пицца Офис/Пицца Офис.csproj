@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Пицца_Офис</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TypeScripts\**" />
+    <Content Remove="TypeScripts\**" />
+    <EmbeddedResource Remove="TypeScripts\**" />
+    <None Remove="TypeScripts\**" />
+    <TypeScriptCompile Remove="TypeScripts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\menuItem\pizza\" />
+    <Folder Include="wwwroot\images\menuItem\pizzaKingSize\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Пицца_Офис.Models.DTO.CategoryMenuDTO>
+
+
+
+<div class="container p-3 ">
+
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary"> Категория</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="CategoryMenu" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle" style="color:green"></i> &nbsp; Добавить Категорию
+            </a>
+        </div>
+    </div>
+    <br /><br />
+
+    <table class="table table-bordered table-striped text-break" style="width:100%">
+        <thead>
+            <tr class="text-center">
+                <th>Название</th>
+                <th></th>
+                @*<th></th>*@
+            </tr>
+        </thead>
+        @if (Model != null)
+        {
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+
+                    <tr class="text-center" style="vertical-align: text-top">
+                        <td width="20%">@item.NameCategory</td>
+                        <td class="text-end">
+
+                            <a asp-controller="CategoryMenu" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success mx-1"><i class="bi bi-pencil-square" style="color:goldenrod"></i>&nbsp;Обновить</a>
+
+
+                            <a asp-controller="CategoryMenu" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger mx-1"><i class="bi bi-trash3-fill" style="color:red"></i>&nbsp;Удалить</a>
+
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        }
+
+
+    </table>
+</div>

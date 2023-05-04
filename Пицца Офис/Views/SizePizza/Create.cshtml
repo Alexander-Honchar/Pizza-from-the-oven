@@ -1,0 +1,32 @@
+﻿@model Пицца_Офис.Models.DTO.SizePizzaDTO
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post" asp-action="Create" >
+    <div class="border p-3 mt-4 " style="width:75%" >
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Добавить Размер</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Size"></label>
+            <input asp-for="Size" class=" form-control" />
+            <span class="text-danger" asp-validation-for="Size"></span>
+        </div>
+        
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="width:150px;">Добавить</button>
+            <a asp-action="Index" class="btn btn-dark" style="width:150px;">Назад</a>
+        </div>
+    </div>
+
+</form>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

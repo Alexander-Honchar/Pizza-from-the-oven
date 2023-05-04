@@ -1,0 +1,93 @@
+﻿@page
+@model Director.Pages.Admin.Home.IndexModel
+@{
+}
+
+<div class=" container row gy-2 justify-content-center">
+    
+    <div class="card p-2 " style="border:2px solid #808080; border-radius: 10px;width:98%">
+        <div class=" card-header  text-light" style="background-color:#222222;">
+                        
+            <div class=" row text-center">
+                <div class="col-2">
+                    <h5>Номер Заказа</h5>
+                </div>
+                <div class="col-2">
+                    <h5>Время</h5>
+                </div>
+                <div class="col-2">
+                    <h5>Заказ</h5>
+                </div>
+                <div class="col-2">
+                    <h5>Менеджер</h5>
+                </div>
+                <div class="col-2">
+                    <h5>Повар</h5>
+                </div>
+                <div class="col-2">
+                    <h5>Статус</h5>
+                </div>
+                <hr />
+            </div>
+        </div>
+                    
+    </div>
+       
+    <div id="cardOrders" class="row gy-1">
+        @*@if (Model != null)
+        {
+            @foreach (var item in Model.Orders)
+            {
+                <div id="@item.IdOrderHeader" class="card p-2 " style="border:2px solid #808080; border-radius: 10px;">
+                    <div class=" card-header  text-light" style="background-color:#222222;">
+
+                        <div class=" row text-center">
+                            <div class="col-2">
+                                <h5>@item.NumberOrder</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5>@item.DateCreateOrder</h5>
+                            </div>
+                            <div class="col-2">
+                                @foreach (var menu in item.MenuName)
+                                {
+                                    <h5>@menu</h5>
+                                }
+                            </div>
+                            <div id="@item.IdOrderHeader" class="manager col-2">
+                                <h5>@item.Manager</h5>
+                            </div>
+                            <div id="@item.IdOrderHeader" class="cook col-2">
+                                <h5>@item.Cook</h5>
+                            </div>
+                            <div id="@item.IdOrderHeader" class="status col-2">
+                                <h5>@item.OrderStatus</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            }
+        }
+        else
+        {
+            <h2>Заказов нет</h2>
+        }*@
+
+    </div>
+</div>
+
+
+
+
+
+
+
+@section Scripts{
+
+    @{
+        <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.js"></script>
+        <script src="~/js/Orders.js"></script>
+    }
+}

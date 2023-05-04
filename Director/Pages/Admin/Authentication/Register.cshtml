@@ -1,0 +1,79 @@
+﻿@page
+@model Director.Pages.Admin.Authentication.RegisterModel
+
+@{
+}
+
+
+<div class="container" style=" height:100px">
+</div>
+
+
+
+<div class="container justify-content-evenly">
+    <div class=" row">
+        <div class=" col-2">
+        </div>
+        <div class="col-8">
+            <div class="card p-2 " style="border:2px solid #808080; border-radius: 10px;">
+                <div class=" card-header  text-light" style="background-color:#222222;height:80px">
+                    <div class=" row text-center">
+                        <h3>Регистрация</h3>
+                        <hr />
+                    </div>
+
+                </div>
+                <form method="post">
+                    <div class="card-body">
+                        <div class=" row text-center">
+                        
+                            <div class="container border p-4">
+
+                                @*<div class="row text-center">
+                                    <div asp-validation-summary="All" class="text-danger"></div>
+                                </div>*@
+                                <div class="row">
+                                    <div class="col-6 offset-3 pb-2">
+                                        <input asp-for="@Model.ModelRegister.UserName" type="text" class="form-control" placeholder="Username..." />
+                                        <span class="text-danger" asp-validation-for="@Model.ModelRegister.UserName"></span>
+                                    </div>
+
+
+                                    <div class="col-6 offset-3 pb-2">
+                                        <input asp-for="@Model.ModelRegister.Password" type="password" class="form-control" placeholder="Password..." />
+                                        <span class="text-danger" asp-validation-for="@Model.ModelRegister.Password"></span>
+                                    </div>
+                                    <div class="col-6 offset-3 pb-2">
+                                        <input asp-for="@Model.ModelRegister.ConfirmPassword" type="password" class="form-control" placeholder="ConfirmPassword..." />
+                                        <span class="text-danger" asp-validation-for="@Model.ModelRegister.ConfirmPassword"></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    <div class=" card-footer">
+                        <div class="row text-center">
+                            <div>
+                                <button type="submit" class="btn btn-primary" style="width:250px; border-radius:20px">Зарегистрироваться</button>
+                            </div>
+                        </div>
+                        <hr />
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+        <div class=" col-2">
+        </div>
+    </div>
+    
+    
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

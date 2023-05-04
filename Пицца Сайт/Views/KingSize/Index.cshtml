@@ -1,0 +1,52 @@
+﻿@model Пицца_Сайт.Models.ViewModels.KingSizeViewModels
+
+
+@if (Model.MemuItemsList != null)
+{
+	<form method="post" asp-action="Index" asp-controller="KingSize">
+
+		<div class="row pb-3">
+			@foreach (var item in Model.MemuItemsList)
+			{
+				<div class="col-md-3. col-md-6 ">
+					<div class="row p-3">
+						<div class="col-12 p-1" style="border:2px solid #008cba; border-radius: 10px; ">
+							<div class="card p-2">
+								<div class="card p-1 ">
+									<a asp-action="Details" asp-route-id=@item.Id>
+										<div>
+											<img class="card-img-top rounded" src="@item.ImagePatch" style="height:850px" />
+										</div>
+									</a>
+
+								</div>
+								<div>
+									<h3 style="color:tomato">@item.Name</h3>
+								</div>
+								<div style="height:100px">
+									<h6 style="color:dimgrey">@item.Description</h6>
+								</div>
+
+
+
+								<div>
+									<div style="height:30px">
+									</div>
+									<div class="text-center">
+
+										<a  asp-action="Details" class="btn btn-outline-danger" asp-route-id="@item.Id" style="width:300px;">Заказать</a>
+
+
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</form>
+}
+

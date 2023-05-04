@@ -1,0 +1,52 @@
+﻿@model Пицца_Офис.Models.ViewModels.PizzaKingSizeDTOViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<form method="post" asp-action="Edit" enctype="multipart/form-data">
+    <input asp-for="PizzaKingSize.Id" hidden />
+    <input asp-for="PizzaKingSize.ImagePath" hidden />
+    @*<input asp-for="MenuItem.PizzaMenuItemId" hidden />*@
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Обновить Пиццу King Size</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="PizzaKingSize.Name"></label>
+            <input asp-for="PizzaKingSize.Name" class=" form-control" />
+            <span class="text-danger" asp-validation-for="PizzaKingSize.Name"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="PizzaKingSize.Price"></label>
+            <input asp-for="PizzaKingSize.Price" class=" form-control" />
+            <span class="text-danger" asp-validation-for="PizzaKingSize.Price"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="PizzaKingSize.Description"></label>
+            <textarea asp-for="PizzaKingSize.Description" class="form-control"></textarea>
+            <span class="text-danger" asp-validation-for="PizzaKingSize.Description"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="PizzaKingSize.ImagePath"></label>
+            <input type="file" name="file" class=" form-control" />
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="width:150px;">Обновить</button>
+            <a asp-action="Index" class="btn btn-dark" style="width:150px;">Назад</a>
+        </div>
+    </div>
+
+</form>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}

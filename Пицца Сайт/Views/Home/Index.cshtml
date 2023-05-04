@@ -1,0 +1,144 @@
+﻿@model Пицца_Сайт.Models.ViewModels.AllPizzaViewModels
+
+
+@if (Model.MenuItemList!=null)
+{
+	<form method="post" asp-action="Index" asp-controller="Home">
+
+		<div class="row pb-3">
+			@foreach (var item in Model.MenuItemList)
+			{
+				<div class="col-md-3. col-md-6 ">
+					<div class="row p-3">
+						<div class="col-12 p-1" style="border:2px solid #008cba; border-radius: 10px; ">
+							<div class="card p-2">
+								<div class="card p-1 ">
+									<a asp-action="Details" asp-route-id=@item.Id>
+										<div>
+											<img class="card-img-top rounded" src="@item.ImagePatch" style="height:500px" />
+										</div>
+									</a>
+
+								</div>
+								<div>
+									<h3 style="color:tomato">@item.Name</h3>
+								</div>
+								<div style="height:80px">
+									<h6 style="color:dimgrey">@item.Description</h6>
+								</div>
+
+
+								<div class="card p-1">
+									<div class="row justify-content-evenly text-center">
+										@foreach (var pizza in Model.PizzaList)
+										{
+											@if (pizza.Name == @item.Name && pizza.SizePizza.Size == "24 см")
+											{
+												<div class="col-sm-4">
+													<input type="radio" value="@pizza.Id" class="btn-check" name="options-outlined" id="@item.Name-24" autocomplete="off" checked>
+													<label class="btn btn-outline-danger m-1" style="width:150px" for="@item.Name-24">∅ 24&nbsp;&nbsp;&nbsp;&nbsp;@pizza.Price&nbsp;грн</label>
+												</div>
+											}
+										}
+
+
+										@foreach (var pizza in Model.PizzaList)
+										{
+											@if (pizza.Name == @item.Name && pizza.SizePizza.Size == "30 см")
+											{
+												<div class="col-4">
+
+													<input type="radio" value="@pizza.Id" class="btn-check" name="options-outlined" id="@item.Name-30" autocomplete="off" checked>
+													<label class="btn btn-outline-danger  m-1" style="width:150px" for="@item.Name-30">∅ 30&nbsp;&nbsp;&nbsp;&nbsp;@pizza.Price&nbsp;грн</label>
+												</div>
+											}
+										}
+
+										@foreach (var pizza in Model.PizzaList)
+										{
+											@if (pizza.Name == @item.Name && pizza.SizePizza.Size == "35 см")
+											{
+												<div class="col-sm-4">
+
+													<input type="radio" value="@pizza.Id" class="btn-check" name="options-outlined" id="@item.Name-35" autocomplete="off" checked>
+													<label class="btn btn-outline-danger  m-1" style="width:150px" for="@item.Name-35">∅ 35&nbsp;&nbsp;&nbsp;&nbsp;@pizza.Price&nbsp;грн</label>
+												</div>
+											}
+										}
+
+
+										@foreach (var pizza in Model.PizzaList)
+										{
+											@if (pizza.Name == @item.Name && pizza.SizePizza.Size == "40 см")
+											{
+												<div class="col-sm-4">
+
+													<input type="radio" value="@pizza.Id" class="btn-check" name="options-outlined" id="@item.Name-40" autocomplete="off" checked>
+													<label class="btn btn-outline-danger  m-1" style="width:150px" for="@item.Name-40">∅ 40&nbsp;&nbsp;&nbsp;&nbsp;@pizza.Price&nbsp;грн</label>
+												</div>
+											}
+										}
+										@foreach (var pizza in Model.PizzaList)
+										{
+											@if (pizza.Name == @item.Name && pizza.SizePizza.Size == "50 см")
+											{
+												<div class="col-sm-4">
+
+													<input type="radio" value="@pizza.Id" class="btn-check" name="options-outlined" id="@item.Name-50" autocomplete="off" checked>
+													<label class="btn btn-outline-danger  m-1" style="width:150px" for="@item.Name-50">∅ 50&nbsp;&nbsp;&nbsp;&nbsp;@pizza.Price&nbsp;грн</label>
+												</div>
+											}
+										}
+
+									</div>
+
+								</div>
+
+								<div>
+									<div style="height:20px">
+									</div>
+									<div class="text-center">
+
+										<button type="submit" class="btn btn-outline-success" asp-route-productid="@item.Id" style="width:300px;">Оформить заказ</button>
+
+
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</form>
+}
+
+
+@section Scripts{
+	@{
+		//<script type="text/javascript">
+		//	$(function () {
+				
+		//		alert(1);
+
+
+		//		localStorage.setItem("testLocal", 5);
+		//		var qw2 = localStorage.getItem("testLocal");
+		//		alert(qw2);
+
+
+		//		sessionStorage.setItem("testSession", 22);
+		//		var qw3 = sessionStorage.getItem("testSession");
+		//		alert(qw3);
+		//	});
+
+
+			
+
+
+
+		//</script>
+	}
+}

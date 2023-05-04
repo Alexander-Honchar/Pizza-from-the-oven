@@ -1,0 +1,65 @@
+﻿@model Пицца_Офис.Models.ViewModels.MenuItemDTOViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<form method="post" asp-action="Create" enctype="multipart/form-data">
+    
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Добавить Меню</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label asp-for="MenuItem.Name"></label>
+            <input asp-for="MenuItem.Name" class=" form-control" />
+            <span class="text-danger" asp-validation-for="MenuItem.Name"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="MenuItem.Price"></label>
+            <input asp-for="MenuItem.Price" class=" form-control" />
+            <span class="text-danger" asp-validation-for="MenuItem.Price"></span>
+        </div>
+        <div class="mb-3">
+			<label asp-for="MenuItem.Description"></label>
+			<textarea asp-for="MenuItem.Description" class="form-control"></textarea>
+			<span class="text-danger" asp-validation-for="MenuItem.Description"></span>
+		</div>
+		
+		<div class="mb-3">
+			<label asp-for="MenuItem.ImagePatch"></label>
+			<input type="file" name="file"  class=" form-control" />
+		</div>
+
+        <div class="mb-3 col-6">
+            <label asp-for="MenuItem.PizzaKingSizeId"></label>
+        <select asp-for="MenuItem.PizzaKingSizeId" asp-items="@Model.PizzaKingSizeList" class="form-select">
+                <option disabled selected>--Выбрать Категорию--</option>
+            </select>
+        <span asp-validation-for="MenuItem.PizzaKingSizeId" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3 col-6">
+            <label asp-for="MenuItem.CategoryMenuId"></label>
+        <select asp-for="MenuItem.CategoryMenuId" asp-items="@Model.CategoryMenuList" class="form-select">
+                <option disabled selected>--Выбрать Категорию--</option>
+            </select>
+        <span asp-validation-for="MenuItem.CategoryMenuId" class="text-danger"></span>
+        </div>
+        
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="width:150px;">Добавить</button>
+            <a asp-action="Index" class="btn btn-dark" style="width:150px;">Назад</a>
+        </div>
+    </div>
+
+</form>
+
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+}
