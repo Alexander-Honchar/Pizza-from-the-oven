@@ -21,7 +21,7 @@
         public const string AdministratorRole = "Administrator";
         public const string DirectorRole = "Director";
         public const string CookRole = "Cook";
-        public const string OfficeRole = "Manager,Administrator";
+        public const string OfficeRole = "Manager,Administrator,Cook";
 
     }
 }
